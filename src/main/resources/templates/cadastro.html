@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+    <head>
+        <title>Seu site de séries!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/style-cadastro.css">
+    
+        <script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
+    
+    </head>
+
+    <body>
+        <div class="formulario">
+        <form action="#" th:action="@{/cadastra-usuario}" method="post" th:object="${usuario}">
+            <div class="type"> 
+                <a href="login2.html">Login</a>
+            </div>
+            <div class="text">
+                Cadastre-se
+            </div>
+            <div class="first-name">
+                
+                    <div id="first-name-field">
+                        <input placeholder="Nome" type="text" th:field="*{nome}"/>
+                    </div>                
+            </div>
+            <div class="last-name">
+                <div id="last-name-field">
+                    <input placeholder="Sobrenome" type="text" th:field="*{sobrenome}"/>
+                </div>
+            </div>
+            <div class="email">
+                <div id="email-field">
+                    <input placeholder="email@email.com" type="text" th:field="*{email}"/>
+                </div>
+            </div>
+            <div class="pass">
+                <div id=pass-field>
+                    <input type="password" placeholder="Senha" th:field="*{hashSenha}"/>
+                </div>
+            </div>
+            <div class="rpass">
+                <div id=rpass-field>
+                    <input type="password" placeholder="Confirme a senha"/>
+                </div>
+            </div>
+            <div class="send">
+                <div id=send-field>
+                    <button type="submit">Confirmar</button>
+                </div>
+            </div>
+        </form>
+        </div>
+        
+    </body>
+
+</html>

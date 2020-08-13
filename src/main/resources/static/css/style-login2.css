@@ -1,0 +1,309 @@
+*{
+    margin: 0em;
+    padding: 0em;
+    font-family: "rockwell";
+    background-color: black;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: url(../images/horikita-2.png);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formulario{
+    display: grid;
+    border: 1px solid white;
+    width: 40vw;
+    height: 90vh;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:"type type"
+                        "texto texto"
+                        "email email"
+                        "pass pass"
+                        "send send";
+    
+    
+}
+
+
+.type{
+    grid-area: type;
+    /* background-color: #202020; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.type{
+    align-items: center;
+    justify-content: center;
+    /* background-color: #202020; */
+    color: white;
+}
+
+.type > a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    /* background-color: #202020; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    font-size: 1.3em;
+}
+
+.text{
+    grid-area: texto;
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+
+.text > a{
+    display: flex;
+    background-color: #202020;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.email{
+    grid-area: email;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+#email-field > input{
+    background-color: #202020;
+    width: 10em;
+    height: 2em;
+    font-size: 1.3em;
+    color: white;
+    padding-left: .4em;
+    border-radius: 1em;
+}
+#email-field{background-color: #202020;}
+
+
+.pass{
+    grid-area: pass;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pass-field{background-color: #202020;}
+
+#pass-field > input{
+    background-color: #202020;
+    width: 10em;
+    height: 2em;
+    font-size: 1.3em;
+    color: white;
+    padding-left: .4em;
+    border-radius: 6em;
+}
+
+
+.send{
+    grid-area: send;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send-field{background-color: #202020;}
+
+#send-field > button{
+    background-color: black;
+    width: 10em;
+    height: 2em;
+    font-size: 1.3em;
+    border-radius: 6em;
+    color: white;
+}
+
+
+#send-field > button:hover{
+    background-color: #74BBFB;
+}
+
+
+@media(max-width:800px){
+    *{
+        margin: 0em;
+        padding: 0em;
+        font-family:  'Arial Narrow', Arial, sans-serif;
+        background-color: black;
+    }
+    
+    body{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        
+        background-image: url(../images/horikita-2.png);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .formulario{
+        display: grid;
+        border: 1px solid white;
+        width: 80%;
+        height: 90vh;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:"type type"
+                            "texto texto"
+                            "email email"
+                            "pass pass"
+                            "send send";
+        
+        
+    }
+    
+    
+    .type{
+        grid-area: type;
+        /* background-color: #202020; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    
+    .type{
+        align-items: center;
+        justify-content: center;
+        /* background-color: #202020; */
+        color: white;
+    }
+    
+    .type > a{
+        display: flex;
+        text-decoration: none;
+        color: white;
+        /* background-color: #202020; */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #151515;
+        font-size: 1.3em;
+    }
+    
+    .text{
+        grid-area: texto;
+        background-color: #151515;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        
+    }
+    
+    
+    .text > a{
+        display: flex;
+        background-color: #202020;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-size: 1.3em;
+    }
+    
+    .email{
+        grid-area: email;
+        background-color: #202020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    
+    
+    #email-field > input{
+        background-color: #202020;
+        width: 10em;
+        height: 2em;
+        font-size: 1.3em;
+        color: white;
+        padding-left: .4em;
+        border-radius: 1em;
+    }
+    #email-field{background-color: #202020;}
+    
+    
+    .pass{
+        grid-area: pass;
+        background-color: #202020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #pass-field{background-color: #202020;}
+    
+    #pass-field > input{
+        background-color: #202020;
+        width: 10em;
+        height: 2em;
+        font-size: 1.3em;
+        color: white;
+        padding-left: .4em;
+        border-radius: 6em;
+    }
+    
+    
+    .send{
+        grid-area: send;
+        background-color: #202020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #send-field{background-color: #202020;}
+    
+    #send-field > button{
+        background-color: black;
+        width: 10em;
+        height: 2em;
+        font-size: 1.3em;
+        border-radius: 6em;
+        color: white;
+    }
+    
+    
+    #send-field > button:hover{
+        background-color: #74BBFB;
+    }
+       
+}
