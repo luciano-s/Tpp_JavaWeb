@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" >
 
     <head>
         <title>Seu site de séries!</title>
@@ -12,13 +12,13 @@
     </head>
 
     <body>
-        <form action="http://localhost:5000/login" method="POST">
+        <form action="#" th:href="@{/index}" method="POST">
             <div class="formulario">
                 <div class="type">
-                    <a href="login2.html">Login</a>
+                    <a href="#" th:href="@{/login}">Login</a>
                 </div>
                 <div class="text">
-                    <a href="cadastro.html">Cadastre-se</a>
+                    <a href="#" th:href="@{/cadastro}">Cadastre-se</a>
                 </div>
 
                 
@@ -36,7 +36,7 @@
 
                 <div class="send">
                     <div id=send-field>
-                        <button>                        
+                        <button type="submit">                        
                             Confimar
                         </button>
                     </div>

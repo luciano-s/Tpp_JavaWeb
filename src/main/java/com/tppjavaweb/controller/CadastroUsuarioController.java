@@ -30,20 +30,12 @@ public class CadastroUsuarioController {
 		System.out.println(usuario.getNome());
 		System.out.println(usuario.getEmail());
 		this.usuarios.save(usuario);
-		return "index";
+		return "redirect:index";
 	}
 	
-	@GetMapping("/categorias")
-	public ModelAndView chamaCategoria() {
-		ModelAndView mv = new ModelAndView("categorias");
-		return mv;
-	}
+
 	
-	@GetMapping("/login")
-	public ModelAndView chamaLogin() {
-		ModelAndView mv = new ModelAndView("login2");
-		return mv;
-	}
+
 	
 	
 }

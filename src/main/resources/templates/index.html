@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" >
 
 <head>
     <title>Seu site de séries!</title>
@@ -18,7 +18,7 @@
 
         <img class="logo" src="images/logo.png">
 
-        <a href="minhas-avaliacoes.html" class="header-items" id="header-item-01">Minhas Avaliações</a>
+        <a href="#" th:href="@{/minhas-avaliacoes}" class="header-items" id="header-item-01">Minhas Avaliações</a>
 
         <a href="#" th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
@@ -47,20 +47,22 @@
                         <button>Fechar &times</button>
                     </div>
                     <div class="user-info">
-
+						
                     </div>
                     <div class="options-sidebar-1" id="1">
                         <a href="#" th:href="@{/login}">Login</a>
-                        
                     </div>
-                    <div class="options-sidebar-2" id="2">
-                        <a href="#" th:href="@{/login}">Sair</a>
-                        
+		             <div class="options-sidebar-2" id="2">
+                        <a href="#" th:href="cadastro">Cadastre-se</a>
                     </div>
                     <div class="options-sidebar-3" id="3">
+                        <a href="#" th:href="@{/login}">Sair</a>
+                    </div>
+                    
+                    <div class="options-sidebar-4" id="4">
                         Categorias
                     </div>    
-                    <div class="options-sidebar-4" id="4">
+                    <div class="options-sidebar-5" id="5">
                         Minhas Avaliações
                     </div>
                     

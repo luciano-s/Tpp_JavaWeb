@@ -246,7 +246,9 @@ div.option-button{
 .options-sidebar-4{
     display: none;
 }
-
+.options-sidebar-5{
+    display: none;
+}
 .options-sidebar-3:hover{
     background-color: #74BBFB;
     cursor: pointer;
