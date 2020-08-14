@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Minhas Avaliações</title>
 	<meta charset="utf-8">
@@ -14,9 +14,9 @@
 		
 		<img class="logo" src="images/logo.png">
 
-		<a href="minhas-avaliacoes.html" class="header-items" id="header-item-01">Minhas Avaliações</a>	
+		<a href="#" th:href="@{/minhas-avaliacoes}" class="header-items" id="header-item-01">Minhas Avaliações</a>	
 
-		<a href="categorias.html" class="header-items" id="header-item-02">Categorias</a>
+		<a href="#" th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
 		<a href="#" class="header-items" id="header-item-03">Recomendação</a>
 
@@ -46,11 +46,11 @@
 
                     </div>
                     <div class="options-sidebar-1" id="1">
-                        <a href="login2.html">Login</a>
+                        <a href="#" th:href="@{/login}">Login</a>
                         
                     </div>
                     <div class="options-sidebar-2" id="2">
-                        <a href="login2.html">Sair</a>
+                        <a href="#" th:href="@{/login}">Sair</a>
                         
                     </div>
                     <div class="options-sidebar-3" id="3">
@@ -152,4 +152,5 @@
 
 </body>
 <script type="text/javascript" src="script/sidebar.js"></script>
+<script th:src="@{script/sidebar.js}"></script>  
 </html>
