@@ -20,22 +20,19 @@ import antlr.collections.List;
 public class CategoriasController {
 	@Autowired
 	private Categorias categorias;
-//	@GetMapping("/categorias")
-//	public ModelAndView chamaCategoria() {
-//		ModelAndView mv = new ModelAndView("categorias");
-//		return mv;
-//	}
-	
+
 	@GetMapping("/categorias")
 	public ModelAndView getCategorias(Model model) {
 		ModelAndView mv = new ModelAndView("categorias");
-//		System.out.println("Categorias: ");
 		ArrayList<Categoria>cat = new ArrayList<Categoria>(categorias.findAll());
-//		for (Categoria c : cat) {
-//			System.out.println("Nome: "+c.getNome()+" id: "+c.getId());
-//		}
 		model.addAttribute("categ", cat);
 		return mv;
+	}
+	
+	@GetMapping("/categoria-serie")
+	public ModelAndView getSeriesByCategoria() {
+		
+		return null;
 	}
 	
 }

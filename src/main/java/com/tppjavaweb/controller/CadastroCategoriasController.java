@@ -43,6 +43,6 @@ public class CadastroCategoriasController {
 		arr.add(new Categoria( 24, "Variedades"));
 		System.out.println(arr);
 		categorias.saveAll(arr);
-		return "redirect:categorias-2";
+		return "redirect:categorias";
 	}
 }
