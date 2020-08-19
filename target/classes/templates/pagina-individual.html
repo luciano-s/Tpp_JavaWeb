@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Breaking Bad</title>
+	<title th:text="${serie.nome}">Breaking Bad</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/style-pagina-individual.css">
+	<link rel="stylesheet" type="text/css" href="/css/style-pagina-individual.css">
 
 	<script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
 
@@ -12,11 +12,11 @@
 
 	<header id="header">
 		
-		<img class="logo" src="images/logo.png">
+		<img class="logo" src="/images/logo.png">
 
-		<a href="minhas-avaliacoes.html" class="header-items" id="header-item-01">Minhas Avaliações</a>	
+		<a href="#" th:href="@{/minhas-avaliacoes}" class="header-items" id="header-item-01">Minhas Avaliações</a>	
 
-		<a href="categorias.html" class="header-items" id="header-item-02">Categorias</a>
+		<a href="#" th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
 		<a href="#" class="header-items" id="header-item-03">Recomendação</a>
 
@@ -46,11 +46,11 @@
 
                     </div>
                     <div class="options-sidebar-1" id="1">
-                        <a href="login2.html">Login</a>
+                        <a href="#" th:href="@{/login}">Login</a>
                         
                     </div>
                     <div class="options-sidebar-2" id="2">
-                        <a href="login2.html">Sair</a>
+                        <a href="#" th:href="@{/login}">Sair</a>
                         
                     </div>
                     <div class="options-sidebar-3" id="3">
@@ -75,7 +75,7 @@
 				
 				<div id="content-area-1-zone-1-image-zone">
 					
-					<img id="series-image" src="images/series_covers/breaking_bad.jpg">
+					<img id="series-image" th:src="${serie.caminhoImagem}"/>
 
 				</div>
 
@@ -102,7 +102,7 @@
 
 					<div id="content-area-1-zone-2-title-zone-title">
 						
-						<h1 id="series-title">Breaking Bad</h1>
+						<h1 id="series-title" th:text="${serie.nome}">B</h1>
 
 					</div>
 
@@ -110,7 +110,7 @@
 
 						<a href=""><i class="far fa-star" id="star-icon-score"></i></a>
 						
-						<h1 id="series-score">9.5</h1>
+						<h1 id="series-score" th:text="${serie.nota}">9.5</h1>
 
 					</div>
 
@@ -167,7 +167,7 @@
 
 
 				<div id="content-area-1-zone-2-sinop-zone">
-					<h2 id="synopsis">
+					<h2 id="synopsis" th:text="${serie.descricao}">
 						Walter White (Bryan Cranston) é um genial professor de Química que, para sustentar sua família, trabalha em jornada dupla. Sua vida monótona sofre uma reviravolta com a descoberta de um câncer no pulmão, de forma que Walt se vê obrigado a conseguir dinheiro para sua família ter uma boa vida após sua morte. Contando com a ajuda de seu ex-aluno Jesse Pinkman (Aaron Paul), Walt entra para o mundo do tráfico passando a produzir a melhor Metanfetamina já produzida, sendo diferenciada no mercado pela sua coloração azul e alto nível de pureza. Encarando os desafios e riscos diários na sua nova e perigosa profissão. Com drama, suspense e ação na medida certa que um fã gosta, Breaking Bad entrou para história, sendo uma das melhores séries, nos últimos tempos.
 					</h2>
 				</div>
@@ -632,5 +632,5 @@
 	</div>
 
 </body>
-<script src="script/sidebar.js"></script>
+<script src="/script/sidebar.js"></script>
 </html>
