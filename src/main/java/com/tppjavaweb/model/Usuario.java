@@ -1,76 +1,118 @@
 package com.tppjavaweb.model;
 
-import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 
-@SuppressWarnings("serial")
+import org.hibernate.validator.constraints.Length;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Usuario implements Serializable{
-	private static final long SerialVersionUID = 1L;
+@Table(name = "usuario")
+public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idUsuario")
+    private Integer id;
+
+    @Column(name = "email")
+    @Email(message = "*Por favor, insira um email válido")
+    @NotEmpty(message = "*Por favor, insira um e-mail")
+    private String email;
+    
+    @Column(name = "senha")
+    @Length(min = 5, message = "*Sua senha deve ter pelo menos 5 caracteres")
+    @NotEmpty(message = "*Por favor insira uma senha")
+    private String senha;
+    
+    @Transient
+    private String confirmaSenha;
+    
+    @Column(name = "nome")
+    @NotEmpty(message = "*Por favor insira seu nome")
+    private String nome;
+    
+    @Column(name = "sobrenome")
+    @NotEmpty(message = "*Por favor insira seu sobrenome")
+    private String sobrenome;
+    
+    @Column(name = "active")
+    private Boolean active;
+    
+    @ManyToMany(cascade = CascadeType.MERGE)
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "idUsuario"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 	
-	
-	@Id
-	@GeneratedValue
-	private Long id;
-	public String getSobrenome() {
-		return sobrenome;
+    public Integer getId() {
+		return id;
 	}
-
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
-	}
-
-	private String nome;
-	private String sobrenome;
-	private String email;
-	private String hashSenha;
-	private String caminhoImg;
-
-	public String getHashSenha() {
-		return hashSenha;
-	}
-
-	public void setHashSenha(String hashSenha) {
-		this.hashSenha = hashSenha;
-	}
-
-	public String getCaminhoImg() {
-		return caminhoImg;
-	}
-
-	public void setCaminhoImg(String caminhoImg) {
-		this.caminhoImg = caminhoImg;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-
-	public Long getId() {
-		return id;
+	public String getSenha() {
+		return senha;
 	}
-
-	public void setId(Long id) {
-		this.id = id;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
-
+	public String getConfirmaSenha() {
+		return confirmaSenha;
+	}
+	public void setConfirmaSenha(String confirmaSenha) {
+		this.confirmaSenha = confirmaSenha;
+	}
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public static long getSerialversionuid() {
-		return SerialVersionUID;
+	public String getSobrenome() {
+		return sobrenome;
 	}
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+	
+	public Boolean getActive() {
+		return active;
+	}
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+	public Set<Role> getRoles() {
+		return roles;
+	}
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
+
 }
