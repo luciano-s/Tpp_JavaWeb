@@ -1,49 +1,52 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" >
+<html xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <title>Seu site de séries!</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="css/style-login2.css">
-    
-        <script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
-    
-    </head>
+<head>
+<title>Seu site de séries!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/style-login2.css">
 
-    <body>
-        <form action="#" th:href="@{/index}" method="POST">
-            <div class="formulario">
-                <div class="type">
-                    <a href="#" th:href="@{/login}">Login</a>
-                </div>
-                <div class="text">
-                    <a href="#" th:href="@{/cadastro}">Cadastre-se</a>
-                </div>
+<script src="https://kit.fontawesome.com/a03e70c092.js"
+	crossorigin="anonymous"></script>
 
-                
-                <div class="email">
-                    <div id="email-field">
-                        <input placeholder="email@email.com" name='email-input'>
-                    </div>
-                </div>
+</head>
 
-                <div class="pass">
-                    <div id=pass-field>
-                        <input type="password" placeholder="Senha" name='pass-input'>
-                    </div>
-                </div>
+<body>
+	<form action="#" th:href="@{/login}" method="POST">
+		<div class="formulario">
+			<div class="text">
+				<a th:href="@{/cadastro}">Cadastre-se</a>
+			</div>
 
-                <div class="send">
-                    <div id=send-field>
-                        <button type="submit">                        
-                            Confimar
-                        </button>
-                    </div>
-                    
-                </div>
-            </div>
-        </form>
-    </body>
+
+			<div class="email">
+				<div id="email-field">
+					<input type="text" id="email" name="email"
+						placeholder="email@email.com" />
+				</div>
+			</div>
+
+			<div class="pass">
+				<div id=pass-field>
+					<input type="password" th:placeholder="Senha" id="senha"
+						name="senha" />
+				</div>
+			</div>
+
+
+			<div class="send">
+				<div id=send-field>
+					<button type="submit">Confirmar</button>
+				</div>
+
+			</div>
+		</div>
+		<div align="center" th:if="${param.error}">
+			<p style="font-size: 20; color: #FF1C19;">Email ou senha
+				inválida, por favor verifique</p>
+		</div>
+	</form>
+</body>
 
 </html>

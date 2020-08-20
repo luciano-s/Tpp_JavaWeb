@@ -1,5 +1,6 @@
 .class
 target/classes/application.properties 
 target/classes/META-INF/maven/com.javaweb/TppJavaWeb/pom.properties
+src/main/resources/application.properties
 .properties
-target
+target/
