@@ -1,28 +1,47 @@
 package com.tppjavaweb.model;
 
 import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+import com.tppjavaweb.model.Categoria;
 
 @SuppressWarnings("serial")
 @Entity
+@Table(name = "serie")
 public class Serie implements Serializable{
 	private static final long SerialVersionUID = 1L;
 	
 	
 	@Id
 	@GeneratedValue
+	@Column(name = "id")
 	private Long id;
+	@Column(name = "nome")
 	private String nome;
+	@Column(name = "temporadas")
 	private int temporadas;
+	@Column(name = "episodiso")
 	private int episodios;
+	@Column(name = "nota")
 	private float nota;
+	@Column(name = "classificacaoInd")
 	private int classificacaoInd;
+	@Column(name = "descricao")
 	private String descricao;
+	@Column(name = "caminhoImagem")
 	private String caminhoImagem;
+	@Column(name = "caminhoTrailer")
 	private String caminhoTrailer;
+	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
+	private Set<Categoria> categoria;
 	public Long getId() {
 		return id;
 	}
