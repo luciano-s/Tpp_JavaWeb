@@ -1,10 +1,16 @@
 package com.tppjavaweb.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
 
 
 @SuppressWarnings("serial")
@@ -14,8 +20,21 @@ public class Categoria implements Serializable{
 	@Id
 	@GeneratedValue
 	private Long id;
+	@Column
 	private String nome;
 	
+	@ManyToMany
+	@JoinTable(name="serie_categoria", joinColumns={@JoinColumn(name="categoria_id")})
+	private Set<Serie> serie;
+	
+	public void setSerie(Set<Serie> serie) {
+		this.serie = serie;
+	}
+	
+	public Set<Serie> getSerie(){
+		return this.serie;
+	}
+
 	public Categoria() {}
 	
 	public Categoria(int i, String string) {
@@ -38,4 +57,7 @@ public class Categoria implements Serializable{
 		return SerialVersionUID;
 	}
 	
+	public void getSeriesByCategoryId() {
+		
+	}
 }
