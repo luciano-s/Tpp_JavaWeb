@@ -44,6 +44,8 @@ public class Serie implements Serializable{
 	private String caminhoTrailer;
 	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
 	private Set<Categoria> categoria = new HashSet<>();
+	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
+	private Set<Usuario> usuarios = new HashSet<>();
 	public Long getId() {
 		return id;
 	}

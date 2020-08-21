@@ -65,7 +65,7 @@
 
 		<div id="page-title-next-button">
 
-			<h1 id="page-title">Avaliações de {{ name }}!</h1>
+			<h1 id="page-title" th:text="${'Avaliações de : '+user.getNome()}"></h1>
 
 			<div class="next-button">	
 				<a href="" class="next-page-button">
@@ -81,13 +81,13 @@
 
 			<div class="series-list-row" id="series-list-row-01">
 
-				<div class="series-list-series-field" id="series-list-series-field-01">
+				<div class="series-list-series-field" th:id="${ser.id}" th:each="ser:${series}">
                     <a href="pagina-individual.html">
-					    <img class="series-list-series-img" src="images/series_covers/breaking_bad.jpg">
+					    <img class="series-list-series-img" th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
 					</a>
 				</div>
 
-				<div class="series-list-series-field" id="series-list-series-field-02">
+				<!--<div class="series-list-series-field" id="series-list-series-field-02">
                     <a href="pagina-individual-2.html">
                         <img class="series-list-series-img" src="images/series_covers/dexter.jpg">
                     </a>
@@ -141,7 +141,7 @@
                     <a href="pagina-individual-10.html">
 					    <img class="series-list-series-img" src="images/series_covers/orphan_black.jpg">
 					</a>
-				</div>
+				</div>-->
 				
 			</div>
 			

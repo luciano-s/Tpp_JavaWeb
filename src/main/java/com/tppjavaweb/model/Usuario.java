@@ -1,5 +1,6 @@
 package com.tppjavaweb.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -63,6 +64,19 @@ public class Usuario {
     @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "idUsuario"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+    
+    @ManyToMany(cascade = CascadeType.MERGE)
+    @JoinTable(name = "usuario_serie",
+    joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "serie_id"))
+	private Set<Serie> serie = new HashSet<>();
+	
+	public void setSerie(Set<Serie> serie) {
+		this.serie = serie;
+	}
+	
+	public Set<Serie> getSerie(){
+		return this.serie;
+	}
 	
     public Integer getId() {
 		return id;
