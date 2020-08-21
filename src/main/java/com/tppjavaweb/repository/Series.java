@@ -12,5 +12,6 @@ import com.tppjavaweb.model.Serie;
 public interface Series extends PagingAndSortingRepository<Serie, Long>{
 	ArrayList<Serie> findByNomeContainingIgnoreCase(String nome, Pageable pageable);
 	Long countByNomeContainingIgnoreCase(String nome);
+	ArrayList<Serie> findByCategoriaId(Long id);
 //	ArrayList<Serie> findByNomeContainingIgnoreCase(String nome);
 }

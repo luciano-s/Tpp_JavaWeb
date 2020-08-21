@@ -2,30 +2,38 @@ package com.tppjavaweb.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 
 
 @SuppressWarnings("serial")
 @Entity
+@Table(name="categoria")
 public class Categoria implements Serializable{
 	private static final long SerialVersionUID = 1L;
-	@Id
+	@Id	
 	@GeneratedValue
+	@Column(name="id")
 	private Long id;
-	@Column
+	@Column(name="nome")
 	private String nome;
 	
-	@ManyToMany
-	@JoinTable(name="serie_categoria", joinColumns={@JoinColumn(name="categoria_id")})
-	private Set<Serie> serie;
+	
+	@ManyToMany(cascade = CascadeType.MERGE)
+    @JoinTable(name = "categoria_serie",
+    joinColumns = @JoinColumn(name = "categoria_id"), inverseJoinColumns = @JoinColumn(name = "serie_id"))
+	private Set<Serie> serie = new HashSet<>();
 	
 	public void setSerie(Set<Serie> serie) {
 		this.serie = serie;

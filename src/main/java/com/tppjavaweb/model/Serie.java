@@ -1,11 +1,13 @@
 package com.tppjavaweb.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -28,7 +30,7 @@ public class Serie implements Serializable{
 	private String nome;
 	@Column(name = "temporadas")
 	private int temporadas;
-	@Column(name = "episodiso")
+	@Column(name = "episodios")
 	private int episodios;
 	@Column(name = "nota")
 	private float nota;
@@ -41,7 +43,7 @@ public class Serie implements Serializable{
 	@Column(name = "caminhoTrailer")
 	private String caminhoTrailer;
 	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
-	private Set<Categoria> categoria;
+	private Set<Categoria> categoria = new HashSet<>();
 	public Long getId() {
 		return id;
 	}

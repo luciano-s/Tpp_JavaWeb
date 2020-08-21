@@ -1,7 +1,9 @@
 package com.tppjavaweb.controller;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
+import org.hibernate.mapping.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,8 +24,8 @@ import antlr.collections.List;
 public class CategoriasController {
 	@Autowired
 	private Categorias categorias;
-//	@Autowired
-//	private Series series;
+	@Autowired
+	private Series series;
 	@GetMapping("/categorias")
 	public ModelAndView getCategorias(Model model) {
 		ModelAndView mv = new ModelAndView("categorias");
@@ -32,13 +34,15 @@ public class CategoriasController {
 		return mv;
 	}
 	
-//	@RequestMapping("{id}/categoria-serie")
-//	public ModelAndView getSeriesByCategoria(@RequestParam Long id, Model model) {
-////		ArrayList<Long>sIds = (ArrayList<Long>)categorias.findIdSeriesByCategory(id);
-////		ArrayList<Serie> serie = (ArrayList<Serie>) series.findAllById(sIds);
-////		model.addAttribute(serie);
-//		ModelAndView mv = new ModelAndView("resultado-busca");
-//		return mv;
-//	}
+	@RequestMapping("{id}/categoria-serie")
+	public ModelAndView getSeriesByCategoria(@PathVariable Long id, Model model) {
+		System.out.println("Entrou na rota");
+		ArrayList<Long> A = (ArrayList<Long>)categorias.findSerieIdByCategoriaId(id);
+		ArrayList<Serie> resultSet = (ArrayList<Serie>)series.findAllById(A);
+		for (Serie rs: resultSet)System.out.println(rs.getNome());
+		model.addAttribute("series", resultSet);
+		ModelAndView mv = new ModelAndView("resultado-busca");
+		return mv;
+	}
 	
 }
