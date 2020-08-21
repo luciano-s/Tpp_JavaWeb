@@ -21,11 +21,16 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value={"/", "/login"})
+    @GetMapping("/login")
     public ModelAndView login(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("login2");
         return modelAndView;
+    }
+    
+    @GetMapping(value="/logout")
+    public String logout(){
+        return "redirect:login";
     }
 
 
