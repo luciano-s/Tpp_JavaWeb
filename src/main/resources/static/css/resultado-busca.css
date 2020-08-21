@@ -768,3 +768,29 @@ div.option-button{
         color: wheat;
     }
 }
+.nada{
+	color: white;
+	text-align: center;
+	padding: .5em;
+	font-size: 1.2em;
+}
+.pag a {
+    padding: .2em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+a.ativo {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+}
+.pag{
+	padding-left: .4em;
+}
+.paginas {
+    display: inline-flex;
+}
