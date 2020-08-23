@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" th:href="@{/css/resultado-busca.css}"/>
 
-<script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
+<script th:src="@{/https://kit.fontawesome.com/a03e70c092.js}" crossorigin="anonymous"></script>
 
 </head>
 
@@ -15,8 +15,8 @@
 	<header id="header">
 
 		<img class="logo" th:src="@{/images/logo.png}"> <a
-			href="minhas-avaliacoes.html" class="header-items"
-			id="header-item-01">Minhas Avaliações</a> <a href="categorias.html"
+			th:href="@{/minhas-avaliacoes}" class="header-items"
+			id="header-item-01">Minhas Avaliações</a> <a th:href="@{/categorias}"
 			class="header-items" id="header-item-02">Categorias</a> <a href="#"
 			class="header-items" id="header-item-03">Recomendação</a>
 
@@ -43,11 +43,11 @@
 					</div>
 					<div class="user-info"></div>
 					<div class="options-sidebar-1" id="1">
-						<a href="login2.html">Login</a>
+						<a th:href="@{/login}">Login</a>
 
 					</div>
 					<div class="options-sidebar-2" id="2">
-						<a href="login2.html">Sair</a>
+						<a href="@{/login}">Sair</a>
 
 					</div>
 					<div class="options-sidebar-3" id="3">Categorias</div>
@@ -88,5 +88,5 @@
 	</div>
 
 </body>
-<script src="script/sidebar.js"></script>
+<script th:src="@{/script/sidebar.js}"></script>
 </html>
