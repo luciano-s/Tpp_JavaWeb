@@ -2,85 +2,78 @@
 <html>
 
 <head>
-    <title>Resultados da Busca</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/resultado-busca.css">
+<title>Resultados da Busca</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/resultado-busca.css">
 
-    <script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a03e70c092.js"
+	crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-    <header id="header">
+	<header id="header">
 
-        <img class="logo" src="images/logo.png">
+		<img class="logo" src="images/logo.png"> <a
+			href="minhas-avaliacoes.html" class="header-items"
+			id="header-item-01">Minhas Avaliações</a> <a href="categorias.html"
+			class="header-items" id="header-item-02">Categorias</a> <a href="#"
+			class="header-items" id="header-item-03">Recomendação</a>
 
-        <a href="minhas-avaliacoes.html" class="header-items" id="header-item-01">Minhas Avaliações</a>
+		<div class="search-area">
 
-        <a href="categorias.html" class="header-items" id="header-item-02">Categorias</a>
+			<div class="search-area-2">
 
-        <a href="#" class="header-items" id="header-item-03">Recomendação</a>
+				<input class="search-field" type="text" name="" placeholder="Type">
 
-        <div class="search-area">
+				<a href="#" class="search-button"> <i class="fas fa-search"></i>
+				</a>
 
-            <div class="search-area-2">
+			</div>
 
-                <input class="search-field" type="text" name="" placeholder="Type">
+		</div>
 
-                <a href="#" class="search-button">
-                    <i class="fas fa-search"></i>
-                </a>
+		<div class="option-button" onclick="sidebarHandler()">
 
-            </div>
+			<div class="option-button-button">
+				<i class="fas fa-list"></i>
+				<div class="sidebar">
+					<div class="close">
+						<button>Fechar &times</button>
+					</div>
+					<div class="user-info"></div>
+					<div class="options-sidebar-1" id="1">
+						<a href="login2.html">Login</a>
 
-        </div>
+					</div>
+					<div class="options-sidebar-2" id="2">
+						<a href="login2.html">Sair</a>
 
-        <div class="option-button" onclick="sidebarHandler()">
+					</div>
+					<div class="options-sidebar-3" id="3">Categorias</div>
+					<div class="options-sidebar-4" id="4">Minhas Avaliações</div>
 
-            <div class="option-button-button">
-                <i class="fas fa-list"></i>
-                <div class="sidebar">
-                    <div class="close">
-                        <button>Fechar &times</button>
-                    </div>
-                    <div class="user-info">
-
-                    </div>
-                    <div class="options-sidebar-1" id="1">
-                        <a href="login2.html">Login</a>
-
-                    </div>
-                    <div class="options-sidebar-2" id="2">
-                        <a href="login2.html">Sair</a>
-
-                    </div>
-                    <div class="options-sidebar-3" id="3">
-                        Categorias
-                    </div>
-                    <div class="options-sidebar-4" id="4">
-                        Minhas Avaliações
-                    </div>
-
-                </div>
-            </div>
+				</div>
+			</div>
 
 
-        </div>
+		</div>
 
-    </header>
+	</header>
 
-    <div class="content">
+	<div class="content">
 
-        <div class="results">
-            <div class="resultado">
-                <h2 style="text-align: center;color:white" th:text="${'Resultado de busca para : '+busca}"></h2>
-            </div>
-            <div class="result-1" th:id="${ser.id}" th:each="ser:${series}">
-                <img th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
-                <h3 th:text="${ser.nome + 'Avaliação ' + ser.nota}"></h3>
-            </div>
-            <!--  <div class="result-2" id='2'>
+		<div class="results">
+			<div class="resultado">
+				<h2 style="text-align: center; color: white"
+					th:text="${'Resultado de busca para : '+busca}"></h2>
+			</div>
+			<div class="result-1" th:id="${ser.id}" th:each="ser:${series}">
+				<img th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
+				<h3 th:text="${ser.nome + 'Avaliação ' + ser.nota}"></h3>
+			</div>
+			<!--  <div class="result-2" id='2'>
                 <img src="images/series_covers/bojack_horseman.jpg">
                 <h3>Bojack Horseman Avaliação 9.5</h3>
             </div>
@@ -88,17 +81,19 @@
                 <img src="images/series_covers/vikings.jpg">
                 <h3>Vikings Avaliação 9.5</h3>
             </div>-->
-            <div class="nada" th:if="${series.size() == 0}">
-			   <p>Busca não retornou nenhum resultado...</p>
+			<div class="nada" th:if="${series.size() == 0}">
+				<p>Busca não retornou nenhum resultado...</p>
 			</div>
-			<div class="paginas">
-				<div class="pag"  th:each="pg:${paginas}">
-				   <a th:classappend="${pg.ativa} ? ativo : bata" th:href="@{'/buscar'+${'?s='+busca+'&pageNo='+pg.pagina}}" th:text="${pg.pagina}"></a>
-				</div>
+		</div>
+		<div class="paginas">
+			<div class="pag" th:each="pg:${paginas}">
+				<a th:classappend="${pg.ativa} ? ativo : bata"
+					th:href="@{'/buscar'+${'?s='+busca+'&pageNo='+pg.pagina}}"
+					th:text="${pg.pagina}"></a>
 			</div>
-        </div>
+		</div>
 
-    </div>
+	</div>
 
 </body>
 <script src="script/sidebar.js"></script>

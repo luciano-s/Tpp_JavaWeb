@@ -46,8 +46,8 @@ public class Serie implements Serializable{
 	private Set<Categoria> categoria = new HashSet<>();
 	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
 	private Set<Usuario> usuarios = new HashSet<>();
-	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
-	private Set<Elenco> elenco = new HashSet<>();
+//	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
+//	private Set<Elenco> elenco = new HashSet<>();
 	public Long getId() {
 		return id;
 	}
