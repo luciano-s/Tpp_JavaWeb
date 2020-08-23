@@ -116,7 +116,7 @@
 
 					<div id="content-area-1-zone-2-title-zone-ci">
 
-						<img id="ci" src="images/classificacao_indicativa/18.png">
+						<img id="ci" src="/images/classificacao_indicativa/18.png">
 						
 					</div>
 					
@@ -146,13 +146,13 @@
 
 					<div id="icon-netflix-zone">
 						<a href="https://www.netflix.com/title/70143836" target="self">
-							<img id="icon-netflix" src="images/icons/netflix.png">
+							<img id="icon-netflix" src="/images/icons/netflix.png">
 						</a>
 					</div>
 
 					<div id="icon-imdb-zone">
 						<a href="https://www.imdb.com/title/tt0903747/?ref_=hm_fanfav_tt_3_pd_fp1" target="self">
-							<img id="icon-imdb" src="images/icons/imdb.png">
+							<img id="icon-imdb" src="/images/icons/imdb.png">
 						</a>
 					</div>
 
@@ -191,110 +191,110 @@
 			<div id="cast-info">
 				
 				<div id="cast-member-01-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/vince_gillian.jpg">
+					<img class="cast-member-img" th:src="${elenco[0].caminhoImagem}">
 				</div>
 				<div id="cast-member-01-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Vince Gillian <br><br> Criador
+					<p class="cast-member-inf" th:text="${elenco[0].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-02-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/bryan_cranston.jpg">
+					<img class="cast-member-img" th:src="${elenco[1].caminhoImagem}">
 				</div>
 				<div id="cast-member-02-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Bryan Cranston <br><br> Ator (Walter White)
+					<p class="cast-member-inf" th:text="${elenco[1].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-03-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/anna_gunn.jpg">
+					<img class="cast-member-img" th:src="${elenco[2].caminhoImagem}">
 				</div>
 				<div id="cast-member-03-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Anna Gunn <br><br> Atriz (Skyler White)
+					<p class="cast-member-inf" th:text="${elenco[2].nome}">
+					
 					</p>
 				</div>
 
 				<div id="cast-member-04-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/aaron_paul.jpg">
+					<img class="cast-member-img" th:src="${elenco[3].caminhoImagem}">
 				</div>
 				<div id="cast-member-04-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Aaron Paul <br><br> Ator (Jesse Pinkman)
+					<p class="cast-member-inf" th:text="${elenco[3].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-05-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/rj_mitte.jpg">
+					<img class="cast-member-img" th:src="${elenco[4].caminhoImagem}">
 				</div>
 				<div id="cast-member-05-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						RJ Mitte <br><br> Ator (Walter White, Jr.)
+					<p class="cast-member-inf" th:text="${elenco[4].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-06-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/bob_odenkirk.jpg">
+					<img class="cast-member-img" th:src="${elenco[5].caminhoImagem}">
 				</div>
 				<div id="cast-member-06-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Bob Odenkirk <br><br> Ator (Saul Goodman)
+					<p class="cast-member-inf" th:text="${elenco[5].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-07-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/betsy_brandt.jpg">
+					<img class="cast-member-img" th:src="${elenco[6].caminhoImagem}">
 				</div>
 				<div id="cast-member-07-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Betsy Brandt <br><br> Atriz (Marie Schrader)
+					<p class="cast-member-inf" th:text="${elenco[6].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-08-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/steven_michael_quezada.jpg">
+					<img class="cast-member-img" th:src="${elenco[7].caminhoImagem}">
 				</div>
 				<div id="cast-member-08-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Steve Michael Quezada <br><br> Ator (Steven Gomez)
+					<p class="cast-member-inf" th:text="${elenco[7].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-09-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/jonathan_banks.jpg">
+					<img class="cast-member-img" th:src="${elenco[8].caminhoImagem}">
 				</div>
 				<div id="cast-member-09-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Jonathan Banks <br><br> Ator (Mike Ehrmantraut)
+					<p class="cast-member-inf" th:text="${elenco[8].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-10-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/dean_norris.jpg">
+					<img class="cast-member-img" th:src="${elenco[9].caminhoImagem}">
 				</div>
 				<div id="cast-member-10-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Dean Norris <br><br> Ator (Hank Schrader)
+					<p class="cast-member-inf" th:text="${elenco[9].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-11-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/giancarlo_esposito.jpg">
+					<img class="cast-member-img" th:src="${elenco[10].caminhoImagem}">
 				</div>
 				<div id="cast-member-11-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Giancarlo Esposito <br><br> Ator (Gus Fring)
+					<p class="cast-member-inf" th:text="${elenco[10].nome}">
+						
 					</p>
 				</div>
 
 				<div id="cast-member-12-image" class="cast-member-image">
-					<img class="cast-member-img" src="images/cast/krysten_ritter.jpg">
+					<img class="cast-member-img" th:src="${elenco[11].caminhoImagem}">
 				</div>
 				<div id="cast-member-12-info" class="cast-member-info">
-					<p class="cast-member-inf">
-						Krysten Ritter <br><br> Atriz (Jane Margolis)
+					<p class="cast-member-inf" th:text="${elenco[11].nome}">
+						
 					</p>
 				</div>
 			</div>

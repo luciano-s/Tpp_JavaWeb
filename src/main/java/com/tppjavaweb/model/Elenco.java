@@ -27,6 +27,14 @@ public class Elenco {
 	private String nome;
 	@Column(name="funcao")
 	private String funcao;
+	public String getCaminhoImagem() {
+		return caminhoImagem;
+	}
+
+	public void setCaminhoImagem(String caminhoImagem) {
+		this.caminhoImagem = caminhoImagem;
+	}
+
 	@Column(name="caminhoImagem")
 	private String caminhoImagem;
 	

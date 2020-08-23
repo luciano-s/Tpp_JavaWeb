@@ -33,17 +33,18 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
+    	
         String loginPage = "/login";
         String logoutPage = "/logout";
 
        http.
-                authorizeRequests()
+         authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers(loginPage).permitAll()
                 .antMatchers("/cadastro").permitAll()
                 .antMatchers("/index").permitAll()
                 .antMatchers("/categorias").permitAll()
+                .antMatchers("/pagina-individual/{id}").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and().csrf().disable()
