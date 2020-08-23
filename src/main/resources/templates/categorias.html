@@ -74,7 +74,7 @@
 			
 			<div th:id="${cat.id}" th:each="cat:${categ}" class="cat-area">
 				<div class="cat">
-					<a th:id="${cat.id}" th:text="${cat.nome}" th:href="${cat.id}+@{/categoria-serie/}"></a>
+					<a th:id="${cat.id}" th:text="${cat.nome}" th:href="${cat.id}+@{/categoria-serie}"></a>
 				</div>
 			</div>
 
