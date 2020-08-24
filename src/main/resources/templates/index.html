@@ -21,7 +21,7 @@
 			id="header-item-01">Minhas Avaliações</a> <a href="#"
 			th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
-		<a href="#" class="header-items" id="header-item-03">Recomendação</a>
+		<a th:href="@{/recomendacao}" class="header-items" id="header-item-03">Recomendação</a>
 
 		<div class="search-area">
 
@@ -49,14 +49,14 @@
 						<a href="#" th:href="@{/login}">Login</a>
 					</div>
 					<div class="options-sidebar-2" id="2">
-						<a href="#" th:href="cadastro">Cadastre-se</a>
+						<a href="#" th:href="@{/cadastro}">Cadastre-se</a>
 					</div>
 					<div class="options-sidebar-3" id="3">
 						<a href="#" th:href="@{/login}">Sair</a>
 					</div>
 
-					<div class="options-sidebar-4" id="4">Categorias</div>
-					<div class="options-sidebar-5" id="5">Minhas Avaliações</div>
+					<div class="options-sidebar-4" id="4"><a th:href="@{/categorias}">Categorias</a></div>
+					<div class="options-sidebar-5" id="5"><a th:href="@{/minhas-avaliacoes}">Minhas Avaliações</a></div>
 
 				</div>
 			</div>

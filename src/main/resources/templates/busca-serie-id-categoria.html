@@ -17,7 +17,7 @@
 		<img class="logo" th:src="@{/images/logo.png}"> <a
 			th:href="@{/minhas-avaliacoes}" class="header-items"
 			id="header-item-01">Minhas Avaliações</a> <a th:href="@{/categorias}"
-			class="header-items" id="header-item-02">Categorias</a> <a href="#"
+			class="header-items" id="header-item-02">Categorias</a> <a th:href="@{/recomendacao}"
 			class="header-items" id="header-item-03">Recomendação</a>
 
 		<div class="search-area">
@@ -63,7 +63,8 @@
 
 	<div class="content">
 
-		<div class="results">
+		<div class="r
+		esults">
 			<div class="resultado">
 				<h2 style="text-align: center; color: white"
 					th:text="${'Resultado da busca'}"></h2>
