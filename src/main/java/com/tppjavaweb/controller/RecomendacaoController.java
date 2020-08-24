@@ -20,14 +20,14 @@ public class RecomendacaoController {
 	
 	@RequestMapping("/recomendacao")
 	public ModelAndView recomendacao() {
-//		ModelAndView mv = new ModelAndView("");
+
 		ArrayList<Serie> arrSeries = (ArrayList<Serie>)series.findAll();
 		int max = arrSeries.size();
 		int n = new Random().nextInt(max);
 		System.out.println(max);
 		Serie serie = arrSeries.get(n);
 		System.out.println(serie.getNome());
-//		model.addAttribute("serie", serie);
+
 		return new ModelAndView("redirect:/buscar?s="+serie.getNome());
 		
 	}
