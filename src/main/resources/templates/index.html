@@ -1,159 +1,158 @@
-	<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" >
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Seu site de séries!</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Seu site de séries!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a03e70c092.js"
+	crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <header id="header">
+	<header id="header">
 
-        <img class="logo" src="images/logo.png">
+		<img class="logo" src="images/logo.png"> <a href="#"
+			th:href="@{/minhas-avaliacoes}" class="header-items"
+			id="header-item-01">Minhas Avaliações</a> <a href="#"
+			th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
-        <a href="#" th:href="@{/minhas-avaliacoes}" class="header-items" id="header-item-01">Minhas Avaliações</a>
+		<a href="#" class="header-items" id="header-item-03">Recomendação</a>
 
-        <a href="#" th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
+		<div class="search-area">
 
-        <a href="#" class="header-items" id="header-item-03">Recomendação</a>
+			<div class="search-area-2">
 
-        <div class="search-area">
+				<input class="search-field" type="text" name="" placeholder="Type">
 
-            <div class="search-area-2">
+				<a href="#" class="search-button"> <i class="fas fa-search"></i>
+				</a>
 
-                <input class="search-field" type="text" name="" placeholder="Type">
+			</div>
 
-                <a href="#" class="search-button">
-                    <i class="fas fa-search"></i>
-                </a>
+		</div>
 
-            </div>
+		<div class="option-button" onclick="sidebarHandler()">
 
-        </div>
+			<div class="option-button-button">
+				<i class="fas fa-list"></i>
+				<div class="sidebar">
+					<div class="close">
+						<button>Fechar &times</button>
+					</div>
+					<div class="user-info"></div>
+					<div class="options-sidebar-1" id="1">
+						<a href="#" th:href="@{/login}">Login</a>
+					</div>
+					<div class="options-sidebar-2" id="2">
+						<a href="#" th:href="cadastro">Cadastre-se</a>
+					</div>
+					<div class="options-sidebar-3" id="3">
+						<a href="#" th:href="@{/login}">Sair</a>
+					</div>
 
-        <div class="option-button" onclick="sidebarHandler()">
-        
-            <div class="option-button-button">
-                <i class="fas fa-list"></i>
-                <div class="sidebar">
-                    <div class="close" >
-                        <button>Fechar &times</button>
-                    </div>
-                    <div class="user-info">
-						
-                    </div>
-                    <div class="options-sidebar-1" id="1">
-                        <a href="#" th:href="@{/login}">Login</a>
-                    </div>
-		             <div class="options-sidebar-2" id="2">
-                        <a href="#" th:href="cadastro">Cadastre-se</a>
-                    </div>
-                    <div class="options-sidebar-3" id="3">
-                        <a href="#" th:href="@{/login}">Sair</a>
-                    </div>
-                    
-                    <div class="options-sidebar-4" id="4">
-                        Categorias
-                    </div>    
-                    <div class="options-sidebar-5" id="5">
-                        Minhas Avaliações
-                    </div>
-                    
-                </div>
-            </div>
+					<div class="options-sidebar-4" id="4">Categorias</div>
+					<div class="options-sidebar-5" id="5">Minhas Avaliações</div>
+
+				</div>
+			</div>
 
 
-        </div>
+		</div>
 
-    </header>
+	</header>
 
-    <div id="content">
+	<div id="content">
 
-        <div id="destaques">
-            Destaques
-        </div>
+		<div id="destaques">Destaques</div>
 
-        <div class="content-center">
-            <div class="button-1">
-                <button class="button-slider" id="left" onclick="plusDivs(-1)">
-                    &#10094;
-                </button>
-            </div>
-            <div class="slider">
-                <!-- <img class="mySlides" src="images/dont-tread-on-me.jpg">
+		<div class="content-center">
+			<div class="button-1">
+				<button class="button-slider" id="left" onclick="plusDivs(-1)">
+					&#10094;</button>
+			</div>
+			<div class="slider">
+				<!-- <img class="mySlides" src="images/dont-tread-on-me.jpg">
                 <img class="mySlides" src="images/dont-tread-on-me-metallica.jpg">
                 <img class="mySlides" src="images/dont-tread-on-me-metallica-black.jpg">
                 <img class="mySlides" src="images/dont-tread-on-meat.jpg"> -->
-                <img class="mySlides" src="images/slider/no-guns-life-1.jpg">
-                <img class="mySlides" src="images/slider/no-guns-life-2.jpg">
-                <img class="mySlides" src="images/slider/oregairu-1.jpg">
-                <img class="mySlides" src="images/slider/oregairu-2.png">
-            </div>
-            <div class="button-2">
-                <button class="button-slider" id="right" onclick="plusDivs(+1)">
-                    &#10095;
-                </button>
-            </div>
-        </div>
+				<img class="mySlides" src="images/slider/no-guns-life-1.jpg">
+				<img class="mySlides" src="images/slider/no-guns-life-2.jpg">
+				<img class="mySlides" src="images/slider/oregairu-1.jpg"> <img
+					class="mySlides" src="images/slider/oregairu-2.png">
+			</div>
+			<div class="button-2">
+				<button class="button-slider" id="right" onclick="plusDivs(+1)">
+					&#10095;</button>
+			</div>
+		</div>
 
-        <div id="mais-populares">
-            Populares
-        </div>
-        
-        <div class="series">
-            
-            <div class="inner-1">
-                <img src="images/series/cover-cloe.jpg">
-                <strong>Classroom of Elite<br>Avaliação: 8</strong>
-            </div>
-            <div class="inner-2">
-                <img src="images/series/cover-codegeass.jpg">
-                
-                <strong>Code Geass<br>Avaliação: 9</strong>
-            </div>
-            <div class="inner-3">
-                <img src="images/series/cover-dark.jpg">
-                <strong>Dark<br>Avaliação: 9</strong>
-            </div>
-            <div class="inner-4">
-                <img src="images/series/cover-parasite.jpg">
-                
-                <strong>Parasite<br>Avaliação: 7</strong>
-            </div>
-            <div class="inner-5">
-                <img src="images/series/cover-konosuba.jpg">
-                <strong>Konosuba<br>Avaliação: 8</strong>
-            </div>
-            <div class="inner-6">
-                <img src="images/series/cover-oregairu.jpg">
-                <strong>Oregairu<br>Avaliação: 8</strong>
-            </div>
-            <div class="inner-7">
-                <img src="images/series/cover-peakyblinders.jpg">
-                <strong>Peaky Blinders<br>Avaliação: 9</strong>
-            </div>
-            <div class="inner-8">
-                <img src="images/series/cover-steinsgate.jpg">
-                <strong>Steins;Gate<br>Avaliação: 9</strong>
-            </div>
-            <div class="inner-9">
-                <img src="images/series/cover-yesterday.jpg">
-                <strong>Yesterday wo Utatte<br>Avaliação: 8</strong>
-            </div>
-        </div>
-    </div>
+		<div id="mais-populares">Populares</div>
 
-    <div class="footer">
-        <h4>Trabalho de Web - Luciano Simeão & Matheus Patrizi - 2020</h4>
-    </div>
+		<div class="series">
+			<div th:class="${'inner-'+(itrStat.index+1)}" th:id="${ser.id}" th:each="ser, itrStat:${series}">
+				<img th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
+				<strong th:inline="text">[[${ser.nome}]]<br>Avaliação: [[${ser.nota}]]</strong>
+			</div>
 
-<script type="text/javascript" th:src="@{script/script.js}"></script>
-<script th:src="@{script/sidebar.js}"></script>  
+			<!--<div class="inner-1">
+				<img src="images/series/cover-cloe.jpg"> <strong>Classroom
+					of Elite<br>Avaliação: 8
+				</strong>
+			</div>
+			<div class="inner-2">
+				<img src="images/series/cover-codegeass.jpg"> <strong>Code
+					Geass<br>Avaliação: 9
+				</strong>
+			</div>
+			<div class="inner-3">
+				<img src="images/series/cover-dark.jpg"> <strong>Dark<br>Avaliação:
+					9
+				</strong>
+			</div>
+			<div class="inner-4">
+				<img src="images/series/cover-parasite.jpg"> <strong>Parasite<br>Avaliação:
+					7
+				</strong>
+			</div>
+			<div class="inner-5">
+				<img src="images/series/cover-konosuba.jpg"> <strong>Konosuba<br>Avaliação:
+					8
+				</strong>
+			</div>
+			<div class="inner-6">
+				<img src="images/series/cover-oregairu.jpg"> <strong>Oregairu<br>Avaliação:
+					8
+				</strong>
+			</div>
+			<div class="inner-7">
+				<img src="images/series/cover-peakyblinders.jpg"> <strong>Peaky
+					Blinders<br>Avaliação: 9
+				</strong>
+			</div>
+			<div class="inner-8">
+				<img src="images/series/cover-steinsgate.jpg"> <strong>Steins;Gate<br>Avaliação:
+					9
+				</strong>
+			</div>
+			<div class="inner-9">
+				<img src="images/series/cover-yesterday.jpg"> <strong>Yesterday
+					wo Utatte<br>Avaliação: 8
+				</strong>
+			</div>-->
+		</div>
+	</div>
+
+	<div class="footer">
+		<h4>Trabalho de Web - Luciano Simeão & Matheus Patrizi - 2020</h4>
+	</div>
+
+	<script type="text/javascript" th:src="@{script/script.js}"></script>
+	<script th:src="@{script/sidebar.js}"></script>
 </body>
 
 
