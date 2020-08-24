@@ -16,6 +16,9 @@
 	<form action="#" th:href="@{/login}" method="POST">
 		<div class="formulario">
 			<div class="text">
+				 Login
+			</div>
+			<div class="type">
 				<a th:href="@{/cadastro}">Cadastre-se</a>
 			</div>
 
@@ -34,17 +37,17 @@
 				</div>
 			</div>
 
-
 			<div class="send">
 				<div id=send-field>
 					<button type="submit">Confirmar</button>
 				</div>
-
 			</div>
-		</div>
-		<div align="center" th:if="${param.error}">
-			<p style="font-size: 20; color: #FF1C19;">Email ou senha
-				inválida, por favor verifique</p>
+			
+			<div class="login-error" align="center" >
+				<div class="erro" th:if="${param.error}">
+					<p>Email ou senha inválida, por favor verifique</p>
+				</div>
+			</div>
 		</div>
 	</form>
 </body>

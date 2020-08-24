@@ -26,7 +26,8 @@ body{
                         "texto texto"
                         "email email"
                         "pass pass"
-                        "send send";
+                        "send send"
+                        "error-message error-message";
     
     
 }
@@ -39,14 +40,9 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
+    
 }
 
-.type{
-    align-items: center;
-    justify-content: center;
-    /* background-color: #202020; */
-    color: white;
-}
 
 .type > a{
     display: flex;
@@ -57,8 +53,11 @@ body{
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #151515;
+    background-color: #202020;
     font-size: 1.3em;
+}
+.type>a:hover{
+	text-decoration: underline;
 }
 
 .text{
@@ -68,7 +67,7 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
-    
+    font-size: 1.3em;
 }
 
 
@@ -125,7 +124,28 @@ body{
     padding-left: .4em;
     border-radius: 6em;
 }
+.login-error{
+	grid-area: error-message;
+	background-color: #202020;
+	height:100%;
+}
 
+.login-error > .erro{
+	width:100%;
+	height:100%;
+	border: 1px solid red;
+}
+
+.login-error > .erro > p{
+	display:flex;
+	background-color: #FFD2D2;
+	color: #D8000C;
+	width:100%;
+	height:100%;
+	font-size: 1.3em;
+	align-items: center;
+    justify-content: center;
+}
 
 .send{
     grid-area: send;
@@ -148,7 +168,7 @@ body{
 
 
 #send-field > button:hover{
-    background-color: #74BBFB;
+    background-color: #555555;
 }
 
 
@@ -158,6 +178,7 @@ body{
         padding: 0em;
         font-family:  'Arial Narrow', Arial, sans-serif;
         background-color: black;
+        font-size: 1em;
     }
     
     body{
@@ -174,14 +195,15 @@ body{
     .formulario{
         display: grid;
         border: 1px solid white;
-        width: 80%;
+        width: 100%;
         height: 90vh;
         grid-template-columns: 50% 50%;
         grid-template-areas:"type type"
                             "texto texto"
                             "email email"
                             "pass pass"
-                            "send send";
+                            "send send"
+                            "error-message error-message";
         
         
     }
@@ -212,8 +234,8 @@ body{
         justify-content: center;
         width: 100%;
         height: 100%;
-        background-color: #151515;
-        font-size: 1.3em;
+        background-color: #202020;
+        font-size: 1.1em;
     }
     
     .text{
@@ -236,7 +258,7 @@ body{
         width: 100%;
         height: 100%;
         text-decoration: none;
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     
     .email{
@@ -253,7 +275,7 @@ body{
         background-color: #202020;
         width: 10em;
         height: 2em;
-        font-size: 1.3em;
+        font-size: 1.1em;
         color: white;
         padding-left: .4em;
         border-radius: 1em;
@@ -275,11 +297,34 @@ body{
         background-color: #202020;
         width: 10em;
         height: 2em;
-        font-size: 1.3em;
+        font-size: 1.1em;
         color: white;
         padding-left: .4em;
         border-radius: 6em;
     }
+    
+	.login-error{
+		grid-area: error-message;
+		background-color: #202020;
+		height:100%;
+	}
+
+	.login-error > .erro{
+		width:100%;
+		height:100%;
+		border: 1px solid red;
+	}
+
+	.login-error > .erro > p{
+		display:flex;
+		background-color: #FFD2D2;
+		color: #D8000C;
+		width:100%;
+		height:100%;
+		font-size: 1.1em;
+		align-items: center;
+    	justify-content: center;
+	}
     
     
     .send{
@@ -303,7 +348,7 @@ body{
     
     
     #send-field > button:hover{
-        background-color: #74BBFB;
+        background-color: #555555;
     }
        
 }
