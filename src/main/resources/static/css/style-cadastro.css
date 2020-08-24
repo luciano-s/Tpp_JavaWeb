@@ -3,6 +3,7 @@
     padding: 0em;
     font-family: "rockwell";
     background-color: black;
+    color: whitesmoke;
 }
 
 body{
@@ -71,7 +72,9 @@ form{
     font-size: 1.3em;
 }
 
-
+.type>a:hover{
+	text-decoration: underline;
+}
 
 
 .first-name{
@@ -151,6 +154,8 @@ form{
 }
 
 #pass-field > input{
+	grid: input;
+	display:flex;
     background-color: #202020;
     width: 10em;
     height: 2em;
@@ -158,9 +163,18 @@ form{
     color: white;
     padding-left: .4em;
     border-radius: 1em;
+    align-items:center;
+	justify-self:center;
 }
 
-#pass-field{background-color: #202020;}
+#pass-field{
+	display: grid;
+	grid-template-areas:"input"
+						"label";
+	background-color: #202020;
+	align-items:center;
+	justify-content:center;
+}
 
 .rpass{
     grid-area: rpass;
@@ -183,6 +197,13 @@ form{
 
 #rpass-field{background-color: #202020;}
 
+.validation-message{
+	grid:label;
+	color: #D8000C;
+    background-color: #FFD2D2;
+    margin-top:3px;
+}
+
 .send{
     grid-area: send;
     background-color: #202020;
@@ -204,7 +225,7 @@ form{
 
 
 #send-field > button:hover{
-    background-color: #74BBFB;
+    background-color: #555555;
 }
 
 
@@ -412,7 +433,7 @@ form{
     
     
     #send-field > button:hover{
-        background-color: #74BBFB;
+        background-color: #555555;
     }
     
 }

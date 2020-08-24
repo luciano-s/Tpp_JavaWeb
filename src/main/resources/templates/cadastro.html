@@ -37,24 +37,24 @@
 			<div class="email">
 				<div id="email-field">
 					<input type="text" th:field="*{email}"
-						placeholder="email@email.com" class="form-control" /> <br /><label
-						th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+						placeholder="email@email.com" class="form-control" /> <br />
+						<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
 						class="validation-message"></label>
 				</div>
 			</div>
 			<div class="pass">
 				<div id=pass-field>
 					<input type="password" th:field="*{senha}" placeholder="Senha"
-						class="form-control" /> <br /><label
-						th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"
-						class="validation-message"></label>
+						class="form-control" /> 
+					<label th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"
+					class="validation-message"></label>
 				</div>
 			</div>
 			<div class="rpass">
 				<div id=rpass-field>
 					<input type="password" th:field="*{confirmaSenha}" placeholder="Confirme a senha"
-						class="form-control" /> <br /><label
-						th:if="${#fields.hasErrors('confirmaSenha')}" th:errors="*{confirmaSenha}"
+						class="form-control" /> <br />
+						<label th:if="${#fields.hasErrors('confirmaSenha')}" th:errors="*{confirmaSenha}"
 						class="validation-message"></label>
 				</div>
 			</div>
