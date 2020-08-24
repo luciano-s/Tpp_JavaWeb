@@ -129,9 +129,9 @@
 					</div>
 
 					<div id="content-area-1-zone-2-info-zone-1-eps">
-						<h2>Temporadas: 5
+						<h2>Temporadas: [[${serie.temporadas}]]
 							<br>
-						Episódios: 62</h2>
+						Episódios: [[${serie.episodios}]]</h2>
 					</div>
 					
 				</div>
@@ -139,8 +139,8 @@
 				<div id="content-area-1-zone-2-info-zone-2">
 
 					<div id="series-date">
-						<h2>
-							20/01/2008 - 29/09/2013
+						<h2 th:text="${serie.periodo}">
+							
 						</h2>
 					</div>
 

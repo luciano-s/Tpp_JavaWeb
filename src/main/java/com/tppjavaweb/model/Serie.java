@@ -42,12 +42,21 @@ public class Serie implements Serializable{
 	private String caminhoImagem;
 	@Column(name = "caminhoTrailer")
 	private String caminhoTrailer;
+	@Column(name = "periodo")
+	private String periodo;
+	
+	public String getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
+	}
 	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
 	private Set<Categoria> categoria = new HashSet<>();
 	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
 	private Set<Usuario> usuarios = new HashSet<>();
-//	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
-//	private Set<Elenco> elenco = new HashSet<>();
+	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
+	private Set<Elenco> elenco = new HashSet<>();
 	public Long getId() {
 		return id;
 	}
