@@ -24,6 +24,9 @@ public interface Series extends PagingAndSortingRepository<Serie, Long>{
 	@Query(nativeQuery = true, value = "SELECT elenco_id FROM elenco_serie WHERE serie_id=?1")
     ArrayList<Long> findElencoIdBySerieId(Long id);
 	
+	@Query(nativeQuery = true, value = "SELECT categoria_id FROM categoria_serie WHERE serie_id=?1")
+    ArrayList<Long> findCategoriaIdBySerieId(Long id);
+	
 	@Query(nativeQuery = true, value = "SELECT "
 			+ "id, caminho_imagem, caminho_trailer, classificacao_ind, descricao, episodios, nome, nota, temporadas "
 			+ "FROM usuario_serie as us INNER JOIN serie s ON us.serie_id = s.id "

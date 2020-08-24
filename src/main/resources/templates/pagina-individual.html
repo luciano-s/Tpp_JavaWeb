@@ -12,7 +12,7 @@
 
 	<header id="header">
 		
-		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a>
+		<a th:href="@{/}"><img class="logo" src="/images/logo.png"></a>
 
 		<a href="#" th:href="@{/minhas-avaliacoes}" class="header-items" id="header-item-01">Minhas Avaliações</a>	
 
@@ -125,7 +125,7 @@
 				<div id="content-area-1-zone-2-info-zone-1">
 
 					<div id="content-area-1-zone-2-info-zone-1-genres">
-						<h2>Crime, Drama, Thriller</h2>
+						<h2 th:text="${cats}"></h2>
 					</div>
 
 					<div id="content-area-1-zone-2-info-zone-1-eps">
