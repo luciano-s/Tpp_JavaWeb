@@ -20,11 +20,10 @@ public class IndexController {
 	@Autowired
 	private Series series;
 
-	@GetMapping("/index")
+	@GetMapping("/")
 	public ModelAndView chamaIndex(Model model) {
 		ModelAndView mv = new ModelAndView("index");
 		ArrayList<Serie> populares = series.getSeriesPopulares(9);
-		System.out.println(populares.size());
 		model.addAttribute("series", populares);
 		return mv;
 	}
