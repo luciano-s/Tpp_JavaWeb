@@ -76,14 +76,15 @@
 					&#10094;</button>
 			</div>
 			<div class="slider">
+			<img class="mySlides" th:src="@{'images/'+${item.src}}" th:id="${item.id}" th:each="item:${sliderItens}">
 				<!-- <img class="mySlides" src="images/dont-tread-on-me.jpg">
                 <img class="mySlides" src="images/dont-tread-on-me-metallica.jpg">
                 <img class="mySlides" src="images/dont-tread-on-me-metallica-black.jpg">
-                <img class="mySlides" src="images/dont-tread-on-meat.jpg"> -->
+                <img class="mySlides" src="images/dont-tread-on-meat.jpg"> 
 				<img class="mySlides" src="images/slider/no-guns-life-1.jpg">
 				<img class="mySlides" src="images/slider/no-guns-life-2.jpg">
 				<img class="mySlides" src="images/slider/oregairu-1.jpg"> <img
-					class="mySlides" src="images/slider/oregairu-2.png">
+					class="mySlides" src="images/slider/oregairu-2.png">-->
 			</div>
 			<div class="button-2">
 				<button class="button-slider" id="right" onclick="plusDivs(+1)">
