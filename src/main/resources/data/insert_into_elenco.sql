@@ -1,0 +1,16 @@
+insert into elenco(30,"/images/cast/bryan_cranston.jpg", "", "Bryan Cranston");
+insert into elenco(31,"/images/cast/anna_gunn.jpg", "", "Anna Gunn");
+insert into elenco(32,"/images/cast/aaron_paul.jpg", "", "Aaron Paul");
+insert into elenco(33,"/images/cast/betsy_brandt.jpg", "", "Betsy Brandt");
+insert into elenco(34,"/images/cast/rj_mitte.jpg", "", "RJ Mitte");
+insert into elenco(35,"/images/cast/dean_norris.jpg", "", "Dean Norris");
+insert into elenco(36,"/images/cast/bob_odenkirk.jpg", "", "Bob Odenkirk");
+insert into elenco(37,"/images/cast/jonathan_banks.jpg", "", "Jonathan Banks");
+insert into elenco(38,"/images/cast/giancarlo_esposito.jpg", "", "Giancarlo Esposito");
+insert into elenco(39,"/images/cast/charles_baker.jpg", "", "Charles Baker");
+insert into elenco(40,"/images/cast/jesse_plemons.jpg", "", "Jesse Plemons");
+insert into elenco(41,"/images/cast/christopher_cousins.jpg", "", "Christopher Cousins");
+insert into elenco(42,"/images/cast/laura_fraser.jpg", "", "Laura Fraser");
+insert into elenco(43,"/images/cast/matt_jones.jpg", "", "Matt Jones");
+insert into elenco(44,"/images/cast/michael_shamus_wiles.jpg", "", "Michael Shamus Wiles");
+insert into elenco(45,"/images/cast/lavell_crawford.jpg", "", "Lavell Crawford");

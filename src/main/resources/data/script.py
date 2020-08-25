@@ -4,7 +4,7 @@ import sys
 def generate_dict(string_data):
     dic = {}
     data = ['id', 'caminho_imagem', 'caminho_trailer','classificacao_ind',
-     'descricao', 'episodios', 'nome', 'nota', 'temporadas']
+     'descricao', 'episodios', 'nome', 'nota', 'temporadas', 'periodo']
     i = 0
     list_int = ['id','classificacao_ind', 'episodios', 'temporadas']
     for d in data:
@@ -23,7 +23,7 @@ def generate_dict(string_data):
 
 
 def generate_query(data):
-    base_query = f'insert into serie (id, caminho_imagem, caminho_trailer, classificacao_ind, descricao, episodios, nome, nota, temporadas) values({data["id"]}, "{data["caminho_imagem"]}", "{data["caminho_trailer"]}",{data["classificacao_ind"]}, "{data["descricao"]}",{data["episodios"]}, "{data["nome"]}",{data["nota"]}, {data["temporadas"]});\n'
+    base_query = f'insert into serie (id, caminho_imagem, caminho_trailer, classificacao_ind, descricao, episodios, nome, nota, temporadas, periodo) values({data["id"]}, "{data["caminho_imagem"]}", "{data["caminho_trailer"]}",{data["classificacao_ind"]}, "{data["descricao"]}",{data["episodios"]}, "{data["nome"]}",{data["nota"]}, {data["temporadas"]}, "{data["periodo"]}");\n'
     return base_query
 
 
@@ -36,18 +36,18 @@ if __name__ == '__main__':
         filename = parameters[1]
         data = []
         with open(filename, "r") as f:
-            buff = f.readline()
-            data.append(buff.split(','))
+            for buff in f:
+                data.append(buff.split(';'))
     else:
         data = []
         message = 'Insira os valores no formato: id, "caminho_imagem", "caminho_trailer",'
-        message += '"classificao_ind", "descricao", episodios, "nome", nota, temporadas'
+        message += '"classificao_ind", "descricao", episodios, "nome", nota, temporadas, "periodo"'
         print(message)
         buff = input()
         while(buff != '\q'):
-            data.append(buff.split(','))
+            data.append(buff.split(';'))
             message = 'Insira os valores no formato id, "caminho_imagem", "caminho_trailer",'
-            message += '"classificao_ind" "descricao", episodios, "nome", nota, temporadas'
+            message += '"classificao_ind" "descricao", episodios, "nome", nota, temporadas, periodo'
             print(message)
             buff = input()
     dict_data = []

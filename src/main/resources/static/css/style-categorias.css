@@ -317,7 +317,10 @@ div.option-button{
     cursor: pointer;
 }
 
-
+label > .validation-message{
+	color: #D8000C;
+    background-color: #FFD2D2;
+}
 
 div#content{
 
