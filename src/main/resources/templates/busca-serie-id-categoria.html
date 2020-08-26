@@ -4,9 +4,11 @@
 <head>
 <title>Resultados da Busca</title>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" th:href="@{/css/resultado-busca.css}"/>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/resultado-busca.css}" />
 
-<script th:src="@{/https://kit.fontawesome.com/a03e70c092.js}" crossorigin="anonymous"></script>
+<script th:src="@{/https://kit.fontawesome.com/a03e70c092.js}"
+	crossorigin="anonymous"></script>
 
 </head>
 
@@ -14,11 +16,11 @@
 
 	<header id="header">
 
-		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a>
-		 <a th:href="@{/minhas-avaliacoes}" class="header-items"
+		<a th:href="@{/}"><img class="logo" src="/images/logo.png"></a>
+		<a th:href="@{/minhas-avaliacoes}" class="header-items"
 			id="header-item-01">Minhas Avaliações</a> <a th:href="@{/categorias}"
-			class="header-items" id="header-item-02">Categorias</a> <a th:href="@{/recomendacao}"
-			class="header-items" id="header-item-03">Recomendação</a>
+			class="header-items" id="header-item-02">Categorias</a> <a
+			th:href="@{/recomendacao}" class="header-items" id="header-item-03">Recomendação</a>
 
 		<div class="search-area">
 
@@ -70,10 +72,13 @@
 					th:text="${'Resultado da busca'}"></h2>
 			</div>
 			<div class="result-1" th:id="${ser.id}" th:each="ser:${series}">
-				<img th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
-				<h3 th:text="${ser.nome + 'Avaliação ' + ser.nota}"></h3>
+
+				<img th:src="@{${ser.caminhoImagem}}"> <a
+					th:href="@{'/pagina-individual/'+${ser.id}}">
+					<h3 th:text="${ser.nome + 'Avaliação ' + ser.nota}"></h3>
+				</a>
 			</div>
-			
+
 			<div class="nada" th:if="${series.size() == 0}">
 				<p>Busca não retornou nenhum resultado...</p>
 			</div>
@@ -81,8 +86,7 @@
 		<div class="paginas">
 			<div class="pag" th:each="pg:${paginas}">
 				<a th:classappend="${pg.ativa} ? ativo : bata"
-					th:href="${'?'+'pageNo='+pg.pagina}"
-					th:text="${pg.pagina}"></a>
+					th:href="${'?'+'pageNo='+pg.pagina}" th:text="${pg.pagina}"></a>
 			</div>
 		</div>
 
