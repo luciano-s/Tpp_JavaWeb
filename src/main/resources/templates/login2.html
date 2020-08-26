@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/style-login2.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 <script src="https://kit.fontawesome.com/a03e70c092.js"
 	crossorigin="anonymous"></script>
@@ -15,9 +17,7 @@
 <body>
 	<form action="#" th:href="@{/login}" method="POST" autocomplete="on">
 		<div class="formulario">
-			<div class="text">
-				 Login
-			</div>
+			<div class="text">Login</div>
 			<div class="type">
 				<a th:href="@{/cadastro}">Cadastre-se</a>
 			</div>
@@ -42,14 +42,18 @@
 					<button type="submit">Confirmar</button>
 				</div>
 			</div>
-			
-			<div class="login-error" align="center" >
+
+			<div class="login-error" align="center">
 				<div class="erro" th:if="${param.error}">
 					<p>Email ou senha inválida, por favor verifique</p>
 				</div>
 			</div>
 		</div>
 	</form>
+	<div class="footer">
+		<h4>Trabalho de Java & Web - Gilmar, Jediael, Luciano e Matheus -
+			2020</h4>
+	</div>
 </body>
 
 </html>

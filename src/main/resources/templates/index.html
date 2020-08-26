@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+
 <script src="https://kit.fontawesome.com/a03e70c092.js"
 	crossorigin="anonymous"></script>
 </head>
@@ -16,8 +17,8 @@
 
 	<header id="header">
 
-		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a> <a href="#"
-			th:href="@{/minhas-avaliacoes}" class="header-items"
+		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a> <a
+			href="#" th:href="@{/minhas-avaliacoes}" class="header-items"
 			id="header-item-01">Minhas Avaliações</a> <a href="#"
 			th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
@@ -55,8 +56,12 @@
 						<a href="#" th:href="@{/login}">Sair</a>
 					</div>
 
-					<div class="options-sidebar-4" id="4"><a th:href="@{/categorias}">Categorias</a></div>
-					<div class="options-sidebar-5" id="5"><a th:href="@{/minhas-avaliacoes}">Minhas Avaliações</a></div>
+					<div class="options-sidebar-4" id="4">
+						<a th:href="@{/categorias}">Categorias</a>
+					</div>
+					<div class="options-sidebar-5" id="5">
+						<a th:href="@{/minhas-avaliacoes}">Minhas Avaliações</a>
+					</div>
 
 				</div>
 			</div>
@@ -76,7 +81,8 @@
 					&#10094;</button>
 			</div>
 			<div class="slider">
-			<img class="mySlides" th:src="@{'images/'+${item.src}}" th:id="${item.id}" th:each="item:${sliderItens}">
+				<img class="mySlides" th:src="@{'images/'+${item.src}}"
+					th:id="${item.id}" th:each="item:${sliderItens}">
 				<!-- <img class="mySlides" src="images/dont-tread-on-me.jpg">
                 <img class="mySlides" src="images/dont-tread-on-me-metallica.jpg">
                 <img class="mySlides" src="images/dont-tread-on-me-metallica-black.jpg">
@@ -95,9 +101,12 @@
 		<div id="mais-populares">Populares</div>
 
 		<div class="series">
-			<div th:class="${'inner-'+(itrStat.index+1)}" th:id="${ser.id}" th:each="ser, itrStat:${series}">
+			<div th:class="${'inner-'+(itrStat.index+1)}" th:id="${ser.id}"
+				th:each="ser, itrStat:${series}">
 				<img th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
-				<strong th:inline="text">[[${ser.nome}]]<br>Avaliação: [[${ser.nota}]]</strong>
+				<strong th:inline="text">[[${ser.nome}]]<br>Avaliação:
+					[[${ser.nota}]]
+				</strong>
 			</div>
 
 			<!--<div class="inner-1">
@@ -149,7 +158,8 @@
 	</div>
 
 	<div class="footer">
-		<h4>Trabalho de Web - Luciano Simeão & Matheus Patrizi - 2020</h4>
+		<h4>Trabalho de Java & Web - Gilmar, Jediael, Luciano e Matheus -
+			2020</h4>
 	</div>
 
 	<script type="text/javascript" th:src="@{script/script.js}"></script>

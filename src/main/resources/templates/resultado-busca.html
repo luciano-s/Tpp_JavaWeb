@@ -5,6 +5,7 @@
 <title>Resultados da Busca</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/resultado-busca.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 <script src="https://kit.fontawesome.com/a03e70c092.js"
 	crossorigin="anonymous"></script>
@@ -15,11 +16,11 @@
 
 	<header id="header">
 
-		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a>
-		 <a	th:href="@{/minhas-avaliacoes}" class="header-items"
+		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a> <a
+			th:href="@{/minhas-avaliacoes}" class="header-items"
 			id="header-item-01">Minhas Avaliações</a> <a th:href="@{/categorias}"
-			class="header-items" id="header-item-02">Categorias</a> <a th:href="@{/recomendacao}"
-			class="header-items" id="header-item-03">Recomendação</a>
+			class="header-items" id="header-item-02">Categorias</a> <a
+			th:href="@{/recomendacao}" class="header-items" id="header-item-03">Recomendação</a>
 
 		<div class="search-area">
 
@@ -70,8 +71,8 @@
 					th:text="${'Resultado de busca para : '+busca}"></h2>
 			</div>
 			<div class="result-1" th:id="${ser.id}" th:each="ser:${series}">
-				<img th:src="@{${ser.caminhoImagem}}">
-				<a 	th:href="@{'/pagina-individual/'+${ser.id}}">
+				<img th:src="@{${ser.caminhoImagem}}"> <a
+					th:href="@{'/pagina-individual/'+${ser.id}}">
 					<h3 th:text="${ser.nome + ' - Avaliação ' + ser.nota}"></h3>
 				</a>
 			</div>
@@ -96,7 +97,10 @@
 		</div>
 
 	</div>
-
+	<div class="footer">
+		<h4>Trabalho de Java & Web - Gilmar, Jediael, Luciano e Matheus -
+			2020</h4>
+	</div>
 </body>
 <script src="script/sidebar.js"></script>
 </html>

@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/style-cadastro.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 <script src="https://kit.fontawesome.com/a03e70c092.js"
 	crossorigin="anonymous"></script>
@@ -13,7 +15,8 @@
 
 <body>
 	<div class="formulario">
-		<form action="#" th:action="@{/cadastro}" method="post" th:object="${user}">
+		<form action="#" th:action="@{/cadastro}" method="post"
+			th:object="${user}">
 			<div class="type">
 				<a href="#" th:href="@{/login}">Login</a>
 			</div>
@@ -21,41 +24,42 @@
 			<div class="first-name">
 
 				<div id="first-name-field">
-					<input type="text"
-						th:field="*{nome}" placeholder="Nome" class="form-control" /><br /><label th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
-						class="validation-message"></label> 
+					<input type="text" th:field="*{nome}" placeholder="Nome"
+						class="form-control" /><br />
+					<label th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
+						class="validation-message"></label>
 				</div>
 			</div>
 			<div class="last-name">
 				<div id="last-name-field">
-					 <input
-						type="text" th:field="*{sobrenome}" placeholder="Sobrenome"
-						class="form-control" /><br /><label th:if="${#fields.hasErrors('sobrenome')}"
+					<input type="text" th:field="*{sobrenome}" placeholder="Sobrenome"
+						class="form-control" /><br />
+					<label th:if="${#fields.hasErrors('sobrenome')}"
 						th:errors="*{sobrenome}" class="validation-message"></label>
 				</div>
 			</div>
 			<div class="email">
 				<div id="email-field">
 					<input type="text" th:field="*{email}"
-						placeholder="email@email.com" class="form-control" /> <br />
-						<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+						placeholder="email@email.com" class="form-control" /> <br /> <label
+						th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
 						class="validation-message"></label>
 				</div>
 			</div>
 			<div class="pass">
 				<div id=pass-field>
 					<input type="password" th:field="*{senha}" placeholder="Senha"
-						class="form-control" /> 
-					<label th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"
-					class="validation-message"></label>
+						class="form-control" /> <label
+						th:if="${#fields.hasErrors('senha')}" th:errors="*{senha}"
+						class="validation-message"></label>
 				</div>
 			</div>
 			<div class="rpass">
 				<div id=rpass-field>
-					<input type="password" th:field="*{confirmaSenha}" placeholder="Confirme a senha"
-						class="form-control" /> <br />
-						<label th:if="${#fields.hasErrors('confirmaSenha')}" th:errors="*{confirmaSenha}"
-						class="validation-message"></label>
+					<input type="password" th:field="*{confirmaSenha}"
+						placeholder="Confirme a senha" class="form-control" /> <br /> <label
+						th:if="${#fields.hasErrors('confirmaSenha')}"
+						th:errors="*{confirmaSenha}" class="validation-message"></label>
 				</div>
 			</div>
 			<div class="send">
@@ -71,6 +75,10 @@
 					th:utext="${successMessage}"></span>
 			</h2>
 		</div>
+	</div>
+	<div class="footer">
+		<h4>Trabalho de Java & Web - Gilmar, Jediael, Luciano e Matheus -
+			2020</h4>
 	</div>
 
 </body>
