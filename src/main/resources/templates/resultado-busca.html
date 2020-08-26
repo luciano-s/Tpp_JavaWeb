@@ -70,8 +70,10 @@
 					th:text="${'Resultado de busca para : '+busca}"></h2>
 			</div>
 			<div class="result-1" th:id="${ser.id}" th:each="ser:${series}">
-				<img th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
-				<h3 th:text="${ser.nome + 'Avaliação ' + ser.nota}"></h3>
+				<img th:src="@{${ser.caminhoImagem}}">
+				<a 	th:href="@{'/pagina-individual/'+${ser.id}}">
+					<h3 th:text="${ser.nome + ' - Avaliação ' + ser.nota}"></h3>
+				</a>
 			</div>
 			<!--  <div class="result-2" id='2'>
                 <img src="images/series_covers/bojack_horseman.jpg">
