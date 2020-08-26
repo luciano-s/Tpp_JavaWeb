@@ -91,11 +91,11 @@ public class PaginaIndividualController {
 	public ModelAndView avaliar(Avaliacao avaliacao, @PathVariable Long id) {
 		Authentication authentication = (Authentication) SecurityContextHolder.getContext().getAuthentication();
 		if (authentication == null) {
-			return new ModelAndView("redirect:login");
+			return new ModelAndView("redirect:../login");
 		}
 		Usuario usuario = usuarios.findByEmail(authentication.getName());
 		if(usuario == null) {
-			return new ModelAndView("redirect:login");
+			return new ModelAndView("redirect:../login");
 		}
 		Optional<Serie> serie = series.findById(id);
 		avaliacao.setSerie(serie.get());
