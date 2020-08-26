@@ -7,13 +7,11 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.tppjavaweb.model.Categoria;
 
 @SuppressWarnings("serial")
 @Entity
@@ -57,6 +55,9 @@ public class Serie implements Serializable{
 	private Set<Usuario> usuarios = new HashSet<>();
 	@ManyToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
 	private Set<Elenco> elenco = new HashSet<>();
+	@OneToMany(mappedBy = "serie", cascade = CascadeType.MERGE)
+	private Set<Avaliacao> avaliacoes = new HashSet<>();
+	
 	public Long getId() {
 		return id;
 	}

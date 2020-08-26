@@ -14,8 +14,8 @@
 
 	<header id="header">
 
-		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a>
-		 <a href="#" th:href="@{/minhas-avaliacoes}" class="header-items"
+		<a th:href="@{/}"><img class="logo" src="images/logo.png"></a> <a
+			href="#" th:href="@{/minhas-avaliacoes}" class="header-items"
 			id="header-item-01">Minhas Avaliações</a> <a href="#"
 			th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
@@ -61,7 +61,7 @@
 
 		<div id="page-title-next-button">
 
-			<h1 id="page-title" th:text="${'Avaliações de : '+user.getNome()}"></h1>
+			<h1 id="page-title" th:text="${'Avaliações de: '+user.getNome()}"></h1>
 
 			<div class="next-button">
 				<a href="" class="next-page-button"> <i
@@ -79,9 +79,8 @@
 
 				<div class="series-list-series-field" th:id="${ser.id}"
 					th:each="ser:${series}">
-					<a href="pagina-individual.html"> <img
-						class="series-list-series-img"
-						th:src="@{'images/series_covers/'+${ser.caminhoImagem}}">
+					<a th:href="@{'/pagina-individual/'+${ser.id}}"> <img
+						class="series-list-series-img" th:src="@{${ser.caminhoImagem}}">
 					</a>
 				</div>
 				<div class="nada" th:if="${series.size() == 0}">

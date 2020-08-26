@@ -51,10 +51,10 @@ public class MinhasAvaliacoesController {
 		ArrayList<PaginaController> paginas = PaginaController.gerarPaginas(pageNo, elementos_por_pagina, total);
 
 		ArrayList<Serie> resultSet = new ArrayList<Serie>();
+		
 		if (sIds.size() != 0) {
 			resultSet = (ArrayList<Serie>) series.findByIds(sIds, page);
 		}
-		
 		model.addAttribute("series", resultSet);
 		model.addAttribute("user", user);
 		model.addAttribute("paginas", paginas);

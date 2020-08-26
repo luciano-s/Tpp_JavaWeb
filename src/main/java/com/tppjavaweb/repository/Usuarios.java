@@ -13,6 +13,7 @@ import com.tppjavaweb.model.Usuario;
 public interface Usuarios extends JpaRepository<Usuario, Long>{
 	Usuario findByEmail(String email);
 	Usuario findById(Integer id);
-	@Query(nativeQuery = true, value = "SELECT serie_id FROM usuario_serie WHERE usuario_id=?1")
+	@Query(nativeQuery = true, value = "SELECT serie_id FROM avaliacao WHERE usuario_id=?1")
     ArrayList<Long> findSerieIdByUsuarioId(Long id);
+	
 }
