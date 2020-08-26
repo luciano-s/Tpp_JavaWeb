@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title th:text="${serie.nome}">Breaking Bad</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/css/style-pagina-individual.css">
+<title th:text="${serie.nome}">Breaking Bad</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css"
+	href="/css/style-pagina-individual.css">
 
-	<script src="https://kit.fontawesome.com/a03e70c092.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a03e70c092.js"
+	crossorigin="anonymous"></script>
 
 </head>
 <body>
 
 	<header id="header">
-		
+
 		<a th:href="@{/}"><img class="logo" src="/images/logo.png"></a>
 
-		<a href="#" th:href="@{/minhas-avaliacoes}" class="header-items" id="header-item-01">Minhas Avaliações</a>	
-
-		<a href="#" th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
+		<a href="#" th:href="@{/minhas-avaliacoes}" class="header-items"
+			id="header-item-01">Minhas Avaliações</a> <a href="#"
+			th:href="@{/categorias}" class="header-items" id="header-item-02">Categorias</a>
 
 		<a href="#" class="header-items" id="header-item-03">Recomendação</a>
 
@@ -26,8 +28,7 @@
 
 				<input class="search-field" type="text" name="" placeholder="Type">
 
-				<a href="#" class="search-button">
-					<i class="fas fa-search"></i>
+				<a href="#" class="search-button"> <i class="fas fa-search"></i>
 				</a>
 
 			</div>
@@ -35,73 +36,66 @@
 		</div>
 
 		<div class="option-button" onclick="sidebarHandler()">
-        
-            <div class="option-button-button">
-                <i class="fas fa-list"></i>
-                <div class="sidebar">
-                    <div class="close">
-                        <button>Fechar &times</button>
-                    </div>
-                    <div class="user-info">
 
-                    </div>
-                    <div class="options-sidebar-1" id="1">
-                        <a href="#" th:href="@{/login}">Login</a>
-                        
-                    </div>
-                    <div class="options-sidebar-2" id="2">
-                        <a href="#" th:href="@{/login}">Sair</a>
-                        
-                    </div>
-                    <div class="options-sidebar-3" id="3">
-                        Categorias
-                    </div>    
-                    <div class="options-sidebar-4" id="4">
-                        Minhas Avaliações
-                    </div>
-                    
-                </div>
-            </div>
+			<div class="option-button-button">
+				<i class="fas fa-list"></i>
+				<div class="sidebar">
+					<div class="close">
+						<button>Fechar &times</button>
+					</div>
+					<div class="user-info"></div>
+					<div class="options-sidebar-1" id="1">
+						<a href="#" th:href="@{/login}">Login</a>
 
+					</div>
+					<div class="options-sidebar-2" id="2">
+						<a href="#" th:href="@{/login}">Sair</a>
+
+					</div>
+					<div class="options-sidebar-3" id="3">Categorias</div>
+					<div class="options-sidebar-4" id="4">Minhas Avaliações</div>
+
+				</div>
+			</div>
 	</header>
 
 
 
 	<div id="content">
-		
+
 		<div id="content-area-1">
-			
+
 			<div id="content-area-1-zone-1">
-				
+
 				<div id="content-area-1-zone-1-image-zone">
-					
-					<img id="series-image" th:src="${serie.caminhoImagem}"/>
+
+					<img id="series-image" th:src="${serie.caminhoImagem}" />
 
 				</div>
 
 				<div id="content-area-1-zone-1-review-zone">
-					
-					<a href=""><i class="far fa-star" id="star-icon-1"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-2"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-3"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-4"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-5"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-6"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-7"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-8"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-9"></i></a>
-					<a href=""><i class="far fa-star" id="star-icon-10"></i></a>
+
+					<a href=""><i class="far fa-star" id="star-icon-1"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-2"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-3"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-4"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-5"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-6"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-7"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-8"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-9"></i></a> <a
+						href=""><i class="far fa-star" id="star-icon-10"></i></a>
 
 				</div>
 
 			</div>
 
 			<div id="content-area-1-zone-2">
-				
+
 				<div id="content-area-1-zone-2-title-zone">
 
 					<div id="content-area-1-zone-2-title-zone-title">
-						
+
 						<h1 id="series-title" th:text="${serie.nome}">B</h1>
 
 					</div>
@@ -109,7 +103,7 @@
 					<div id="content-area-1-zone-2-title-zone-score">
 
 						<a href=""><i class="far fa-star" id="star-icon-score"></i></a>
-						
+
 						<h1 id="series-score" th:text="${serie.nota}">9.5</h1>
 
 					</div>
@@ -117,9 +111,9 @@
 					<div id="content-area-1-zone-2-title-zone-ci">
 
 						<img id="ci" src="/images/classificacao_indicativa/18.png">
-						
+
 					</div>
-					
+
 				</div>
 
 				<div id="content-area-1-zone-2-info-zone-1">
@@ -129,19 +123,18 @@
 					</div>
 
 					<div id="content-area-1-zone-2-info-zone-1-eps">
-						<h2>Temporadas: [[${serie.temporadas}]]
-							<br>
-						Episódios: [[${serie.episodios}]]</h2>
+						<h2>
+							Temporadas: [[${serie.temporadas}]] <br> Episódios:
+							[[${serie.episodios}]]
+						</h2>
 					</div>
-					
+
 				</div>
 
 				<div id="content-area-1-zone-2-info-zone-2">
 
 					<div id="series-date">
-						<h2 th:text="${serie.periodo}">
-							
-						</h2>
+						<h2 th:text="${serie.periodo}"></h2>
 					</div>
 
 					<div id="icon-netflix-zone">
@@ -151,8 +144,10 @@
 					</div>
 
 					<div id="icon-imdb-zone">
-						<a href="https://www.imdb.com/title/tt0903747/?ref_=hm_fanfav_tt_3_pd_fp1" target="self">
-							<img id="icon-imdb" src="/images/icons/imdb.png">
+						<a
+							href="https://www.imdb.com/title/tt0903747/?ref_=hm_fanfav_tt_3_pd_fp1"
+							target="self"> <img id="icon-imdb"
+							src="/images/icons/imdb.png">
 						</a>
 					</div>
 
@@ -160,348 +155,347 @@
 				</div>
 
 				<div id="content-area-1-zone-2-trailer-zone">
-					<video controls autoplay id="trailer" >
+					<video controls autoplay id="trailer">
 						<source src="videos/trailers/breaking_bad.mp4" type="video/mp4">
 					</video>
 				</div>
 
 
 				<div id="content-area-1-zone-2-sinop-zone">
-					<h2 id="synopsis" th:text="${serie.descricao}">
-						Walter White (Bryan Cranston) é um genial professor de Química que, para sustentar sua família, trabalha em jornada dupla. Sua vida monótona sofre uma reviravolta com a descoberta de um câncer no pulmão, de forma que Walt se vê obrigado a conseguir dinheiro para sua família ter uma boa vida após sua morte. Contando com a ajuda de seu ex-aluno Jesse Pinkman (Aaron Paul), Walt entra para o mundo do tráfico passando a produzir a melhor Metanfetamina já produzida, sendo diferenciada no mercado pela sua coloração azul e alto nível de pureza. Encarando os desafios e riscos diários na sua nova e perigosa profissão. Com drama, suspense e ação na medida certa que um fã gosta, Breaking Bad entrou para história, sendo uma das melhores séries, nos últimos tempos.
-					</h2>
+					<h2 id="synopsis" th:text="${serie.descricao}">Walter White
+						(Bryan Cranston) é um genial professor de Química que, para
+						sustentar sua família, trabalha em jornada dupla. Sua vida
+						monótona sofre uma reviravolta com a descoberta de um câncer no
+						pulmão, de forma que Walt se vê obrigado a conseguir dinheiro para
+						sua família ter uma boa vida após sua morte. Contando com a ajuda
+						de seu ex-aluno Jesse Pinkman (Aaron Paul), Walt entra para o
+						mundo do tráfico passando a produzir a melhor Metanfetamina já
+						produzida, sendo diferenciada no mercado pela sua coloração azul e
+						alto nível de pureza. Encarando os desafios e riscos diários na
+						sua nova e perigosa profissão. Com drama, suspense e ação na
+						medida certa que um fã gosta, Breaking Bad entrou para história,
+						sendo uma das melhores séries, nos últimos tempos.</h2>
 				</div>
 
 			</div>
 
 		</div>
-		
+
 	</div>
 
 	<div id="content2">
-		
+
 		<div id="content2-area-1">
-				
+
 			<div id="cast-title-area">
-				
+
 				<h1 id="cast-title">Elenco Principal</h1>
 
 			</div>
 
 			<div id="cast-info">
-				
+
 				<div id="cast-member-01-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[0].caminhoImagem}">
 				</div>
 				<div id="cast-member-01-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[0].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[0].nome}"></p>
 				</div>
 
 				<div id="cast-member-02-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[1].caminhoImagem}">
 				</div>
 				<div id="cast-member-02-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[1].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[1].nome}"></p>
 				</div>
 
 				<div id="cast-member-03-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[2].caminhoImagem}">
 				</div>
 				<div id="cast-member-03-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[2].nome}">
-					
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[2].nome}"></p>
 				</div>
 
 				<div id="cast-member-04-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[3].caminhoImagem}">
 				</div>
 				<div id="cast-member-04-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[3].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[3].nome}"></p>
 				</div>
 
 				<div id="cast-member-05-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[4].caminhoImagem}">
 				</div>
 				<div id="cast-member-05-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[4].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[4].nome}"></p>
 				</div>
 
 				<div id="cast-member-06-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[5].caminhoImagem}">
 				</div>
 				<div id="cast-member-06-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[5].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[5].nome}"></p>
 				</div>
 
 				<div id="cast-member-07-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[6].caminhoImagem}">
 				</div>
 				<div id="cast-member-07-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[6].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[6].nome}"></p>
 				</div>
 
 				<div id="cast-member-08-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[7].caminhoImagem}">
 				</div>
 				<div id="cast-member-08-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[7].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[7].nome}"></p>
 				</div>
 
 				<div id="cast-member-09-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[8].caminhoImagem}">
 				</div>
 				<div id="cast-member-09-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[8].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[8].nome}"></p>
 				</div>
 
 				<div id="cast-member-10-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[9].caminhoImagem}">
 				</div>
 				<div id="cast-member-10-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[9].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[9].nome}"></p>
 				</div>
 
 				<div id="cast-member-11-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[10].caminhoImagem}">
 				</div>
 				<div id="cast-member-11-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[10].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[10].nome}"></p>
 				</div>
 
 				<div id="cast-member-12-image" class="cast-member-image">
 					<img class="cast-member-img" th:src="${elenco[11].caminhoImagem}">
 				</div>
 				<div id="cast-member-12-info" class="cast-member-info">
-					<p class="cast-member-inf" th:text="${elenco[11].nome}">
-						
-					</p>
+					<p class="cast-member-inf" th:text="${elenco[11].nome}"></p>
 				</div>
 			</div>
 
 		</div>
-		
+
 	</div>
 
 	<div id="content3">
-		
+
 		<div id="content3-area-1">
 
 			<div id="reviews-title-area">
-				
+
 				<h1 id="reviews-title">Avaliações</h1>
 
 			</div>
 
 			<div id="reviews-main-area">
-				
+
 				<div id="user-review">
-					
-					<div id="user-review-title-area">
-						
-						<h1 id="user-review-title">Minha Avaliação</h1>
+					<form action="#" th:href="@{/pagina-individual/{id}}" method="POST">
 
-					</div>
+						<div id="user-review-title-area">
 
-					<div id="user-review-review-area">
-						
-						<textarea id="user-review-text" placeholder="Sua Avaliação..."></textarea>
-
-					</div>
-
-					<div id="user-review-scores-area-01">
-						
-						<div id="user-review-score-01-text">			
-							<h1>História</h1>
-						</div>
-						<div id="user-review-score-01-score">
-							<select name="cars" class="score-selct" id="score-01-selct">
-								<option value="0">0</option>
-    							<option value="1">1</option>
-    							<option value="2">2</option>
-    							<option value="3">3</option>
-    							<option value="4">4</option>
-    							<option value="5">5</option>
-    							<option value="6">6</option>
-    							<option value="7">7</option>
-    							<option value="8">8</option>
-    							<option value="9">9</option>
-    							<option value="10">10</option>
-  							</select>
-						</div>
-
-						<div id="user-review-score-02-text">
-							<h1 >Personagens</h1>	
-						</div>
-						<div id="user-review-score-02-score">
-							<select name="cars" class="score-selct" id="score-02-selct">
-								<option value="0">0</option>
-    							<option value="1">1</option>
-    							<option value="2">2</option>
-    							<option value="3">3</option>
-    							<option value="4">4</option>
-    							<option value="5">5</option>
-    							<option value="6">6</option>
-    							<option value="7">7</option>
-    							<option value="8">8</option>
-    							<option value="9">9</option>
-    							<option value="10">10</option>
-  							</select>
-						</div>
-
-					</div>
-
-					<div id="user-review-scores-area-02">
-						<div id="user-review-score-03-text">			
-							<h1>Direção</h1>
-						</div>
-						<div id="user-review-score-03-score">
-							<select name="cars" class="score-selct" id="score-03-selct">
-								<option value="0">0</option>
-    							<option value="1">1</option>
-    							<option value="2">2</option>
-    							<option value="3">3</option>
-    							<option value="4">4</option>
-    							<option value="5">5</option>
-    							<option value="6">6</option>
-    							<option value="7">7</option>
-    							<option value="8">8</option>
-    							<option value="9">9</option>
-    							<option value="10">10</option>
-  							</select>
-						</div>
-
-						<div id="user-review-score-04-text">
-							<h1 >Trilha Sonora</h1>	
-						</div>
-						<div id="user-review-score-04-score">
-							<select name="cars" class="score-selct" id="score-04-selct">
-								<option value="0">0</option>
-    							<option value="1">1</option>
-    							<option value="2">2</option>
-    							<option value="3">3</option>
-    							<option value="4">4</option>
-    							<option value="5">5</option>
-    							<option value="6">6</option>
-    							<option value="7">7</option>
-    							<option value="8">8</option>
-    							<option value="9">9</option>
-    							<option value="10">10</option>
-  							</select>
-						</div>
-					</div>
-
-					<div id="user-review-scores-area-03">
-
-						<div id="void-01"></div>
-
-						<div id="user-review-score-05-text">
-							<h1 >Avaliação Geral</h1>	
-						</div>
-						<div id="user-review-score-05-score">
-							<select name="cars" class="score-selct" id="score-05-selct">
-								<option value="0">0</option>
-    							<option value="1">1</option>
-    							<option value="2">2</option>
-    							<option value="3">3</option>
-    							<option value="4">4</option>
-    							<option value="5">5</option>
-    							<option value="6">6</option>
-    							<option value="7">7</option>
-    							<option value="8">8</option>
-    							<option value="9">9</option>
-    							<option value="10">10</option>
-  							</select>
-						</div>
-					</div>
-
-					<div id="user-review-button-area">
-						
-						<div id="button-review">
-							
-							<h1>Avaliar</h1>
+							<h1 id="user-review-title">Minha Avaliação</h1>
 
 						</div>
 
-					</div>
+						<div id="user-review-review-area">
 
+							<textarea id="texto" name="texto" placeholder="Sua Avaliação..."></textarea>
+
+						</div>
+
+						<div id="user-review-scores-area-01">
+
+							<div id="user-review-score-01-text">
+								<h1>História</h1>
+							</div>
+							<div id="user-review-score-01-score">
+								<select name="notaHistoria" class="score-selct"
+									id="notaHistoria">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+
+							<div id="user-review-score-02-text">
+								<h1>Personagens</h1>
+							</div>
+							<div id="user-review-score-02-score">
+								<select name="notaPersonagem" class="score-selct"
+									id="notaPersonagem">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+
+						</div>
+
+						<div id="user-review-scores-area-02">
+							<div id="user-review-score-03-text">
+								<h1>Direção</h1>
+							</div>
+							<div id="user-review-score-03-score">
+								<select name="notaDirecao" class="score-selct" id="notaDirecao">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+
+							<div id="user-review-score-04-text">
+								<h1>Trilha Sonora</h1>
+							</div>
+							<div id="user-review-score-04-score">
+								<select name="notaSonora" class="score-selct" id="notaSonora">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="user-review-scores-area-03">
+
+							<div id="void-01"></div>
+
+							<div id="user-review-score-05-text">
+								<h1>Avaliação Geral</h1>
+							</div>
+							<div id="user-review-score-05-score">
+								<select name="notaGeral" class="score-selct" id="notaGeral">
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="user-review-button-area">
+
+							<button type="submit" id="button-review">
+
+								<h1>Avaliar</h1>
+
+							</button>
+
+						</div>
+					</form>
 				</div>
 
 
 
 				<div id="liked-reviews">
-					
+
 					<div id="liked-reviews-title-area">
-						
+
 						<h1>Avaliações Mais Relevantes</h1>
 
 					</div>
 
 					<div id="liked-reviews-reviews-area">
-						
-						<div class="liked-review-area-out" id="liked-review-area-01">
+
+						<div class="liked-review-area-out" th:id="${av.id}"
+							th:each="av:${avaliacoes}">
 							<div class="liked-review-area">
-								
+
 								<div class="liked-review-area-01">
-									
+
 									<div class="liked-review-image">
-										<img class="liked-review-img" src="images/user_images/img_01.jpg">
+										<img class="liked-review-img"
+											src="/images/user_images/img_01.jpg">
 									</div>
 
 									<div class="liked-review-info">
-										<p>ZézinhoJocoso <br><br> Nota Geral: 9</p>
+										<p th:text="${av.nome}"></p><br />
+										<p th:text="'Nota Geral: '+${av.notaGeral}"></p>
 									</div>
 
 									<div class="liked-reviews-like-icon">
 										<a href=""><i class="far fa-thumbs-up" id="thumb-icon"></i></a>
-										<p class="thumb-icon-number"><br> 2700</p>
+										<p class="thumb-icon-number" th:text="${av.numeroLikes}">
+
+										</p>
 									</div>
 
 								</div>
 
 								<div class="liked-review-area-02">
-									<p class="liked-review-text">Série Pikíssima!!</p>
+									<p class="liked-review-text" th:text="${av.texto}"></p>
 								</div>
 
 							</div>
 						</div>
 
-						<div class="liked-review-area-out" id="liked-review-area-02">
+						<!-- <div class="liked-review-area-out" id="liked-review-area-02">
 							<div class="liked-review-area">
-								
+
 								<div class="liked-review-area-01">
-									
+
 									<div class="liked-review-image">
-										<img class="liked-review-img" src="images/user_images/img_02.jpg">
+										<img class="liked-review-img"
+											src="/images/user_images/img_02.jpg">
 									</div>
 
 									<div class="liked-review-info">
-										<p>FogoNosMaxistaXX <br><br> Nota Geral: 1</p>
+										<p>
+											FogoNosMaxistaXX <br> <br> Nota Geral: 1
+										</p>
 									</div>
 
 									<div class="liked-reviews-like-icon">
 										<a href=""><i class="far fa-thumbs-up" id="thumb-icon"></i></a>
-										<p class="thumb-icon-number"><br> 2622</p>
+										<p class="thumb-icon-number">
+											<br> 2622
+										</p>
 									</div>
 
 								</div>
@@ -515,20 +509,25 @@
 
 						<div class="liked-review-area-out" id="liked-review-area-03">
 							<div class="liked-review-area">
-								
+
 								<div class="liked-review-area-01">
-									
+
 									<div class="liked-review-image">
-										<img class="liked-review-img" src="images/user_images/img_03.jpg">
+										<img class="liked-review-img"
+											src="/images/user_images/img_03.jpg">
 									</div>
 
 									<div class="liked-review-info">
-										<p>Calango Atômico<br><br> Nota Geral: 4</p>
+										<p>
+											Calango Atômico<br> <br> Nota Geral: 4
+										</p>
 									</div>
 
 									<div class="liked-reviews-like-icon">
 										<a href=""><i class="far fa-thumbs-up" id="thumb-icon"></i></a>
-										<p class="thumb-icon-number"><br> 2260</p>
+										<p class="thumb-icon-number">
+											<br> 2260
+										</p>
 									</div>
 
 								</div>
@@ -542,20 +541,25 @@
 
 						<div class="liked-review-area-out" id="liked-review-area-04">
 							<div class="liked-review-area">
-								
+
 								<div class="liked-review-area-01">
-									
+
 									<div class="liked-review-image">
-										<img class="liked-review-img" src="images/user_images/img_04.jpg">
+										<img class="liked-review-img"
+											src="/images/user_images/img_04.jpg">
 									</div>
 
 									<div class="liked-review-info">
-										<p>Keri@Merimouji <br><br> Nota Geral: 9</p>
+										<p>
+											Keri@Merimouji <br> <br> Nota Geral: 9
+										</p>
 									</div>
 
 									<div class="liked-reviews-like-icon">
 										<a href=""><i class="far fa-thumbs-up" id="thumb-icon"></i></a>
-										<p class="thumb-icon-number"><br> 2252</p>
+										<p class="thumb-icon-number">
+											<br> 2252
+										</p>
 									</div>
 
 								</div>
@@ -569,20 +573,25 @@
 
 						<div class="liked-review-area-out" id="liked-review-area-05">
 							<div class="liked-review-area">
-								
+
 								<div class="liked-review-area-01">
-									
+
 									<div class="liked-review-image">
-										<img class="liked-review-img" src="images/user_images/img_05.jpg">
+										<img class="liked-review-img"
+											src="/images/user_images/img_05.jpg">
 									</div>
 
 									<div class="liked-review-info">
-										<p>BunnyaPeperoni <br><br> Nota Geral: 10</p>
+										<p>
+											BunnyaPeperoni <br> <br> Nota Geral: 10
+										</p>
 									</div>
 
 									<div class="liked-reviews-like-icon">
 										<a href=""><i class="far fa-thumbs-up" id="thumb-icon"></i></a>
-										<p class="thumb-icon-number"><br> 2221</p>
+										<p class="thumb-icon-number">
+											<br> 2221
+										</p>
 									</div>
 
 								</div>
@@ -596,20 +605,25 @@
 
 						<div class="liked-review-area-out" id="liked-review-area-06">
 							<div class="liked-review-area">
-								
+
 								<div class="liked-review-area-01">
-									
+
 									<div class="liked-review-image">
-										<img class="liked-review-img" src="images/user_images/img_06.jpg">
+										<img class="liked-review-img"
+											src="/images/user_images/img_06.jpg">
 									</div>
 
 									<div class="liked-review-info">
-										<p>MicariaZopolina <br><br> Nota Geral: 5</p>
+										<p>
+											MicariaZopolina <br> <br> Nota Geral: 5
+										</p>
 									</div>
 
 									<div class="liked-reviews-like-icon">
 										<a href=""><i class="far fa-thumbs-up" id="thumb-icon"></i></a>
-										<p class="thumb-icon-number"><br> 2152</p>
+										<p class="thumb-icon-number">
+											<br> 2152
+										</p>
 									</div>
 
 								</div>
@@ -619,7 +633,7 @@
 								</div>
 
 							</div>
-						</div>
+						</div>-->
 
 					</div>
 
@@ -628,7 +642,7 @@
 			</div>
 
 		</div>
-		
+
 	</div>
 
 </body>

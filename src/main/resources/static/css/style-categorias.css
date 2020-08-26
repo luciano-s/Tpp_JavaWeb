@@ -531,6 +531,19 @@ div#cat-24{
 	grid-area: cat-24;
 }
 
+.footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height: 5em;
+	grid-area: foot;
+	color: #FFF;
+    background-color: #282828;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
 
 @media (max-width: 600px){
 

@@ -12,12 +12,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
+
+import com.tppjavaweb.repository.Avaliacoes;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -69,7 +72,11 @@ public class Usuario {
     @JoinTable(name = "usuario_serie",
     joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "serie_id"))
 	private Set<Serie> serie = new HashSet<>();
-	
+    
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.MERGE)
+	private Set<Avaliacao> avaliacoes = new HashSet<>();
+
+    
 	public void setSerie(Set<Serie> serie) {
 		this.serie = serie;
 	}
